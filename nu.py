@@ -13,7 +13,8 @@ from googletrans import Translator
 #==============================================================================#
 botStart = time.time()
 #==============================================================================#
-line = LINE()
+line = LINE("EuYDLKLWJMd6fPMlc4wf.4YSrMg2oNLZ3c2qS97Qi+W.euhH6QE1ncQ/E2Din2fiy/WrkBt4YX4GgW38NFj6EcE=")
+#line = LINE()
 #line = LINE('EsWxrB4tKn6gC6TFI5C7.6s2jZdrOy8zaUkEfxHsR1W.DgrqvMHxZTAtX3m4jYOE8Ur7iqZm4P7/VvXmsYU0RHY=')
 line.log("Auth Token : " + str(line.authToken))
 line.log("Timeline Token : " + str(line.tl.channelAccessToken))
