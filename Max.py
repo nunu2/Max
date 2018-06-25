@@ -463,7 +463,7 @@ def lineBot(op):
                 if text.lower() == 'help':
                     helpMessage = helpmessage()
                     line.sendMessage(to, str(helpMessage))
-                    line.sendContact(to, "u283825ccd9c7b996bbe31c312a80489c")
+                    line.sendContact(to, "ue32b11986d8e9e5cf70b642cf7ba88ff")
                 elif text.lower() == 'texttospeech':
                     helpTextToSpeech = helptexttospeech()
                     line.sendMessage(to, str(helpTextToSpeech))
@@ -487,7 +487,7 @@ def lineBot(op):
                 elif text.lower() == 'about':
                     try:
                         arr = []
-                        owner = "u283825ccd9c7b996bbe31c312a80489c"
+                        owner = "ue32b11986d8e9e5cf70b642cf7ba88ff"
                         creator = line.getContact(owner)
                         contact = line.getContact(lineMID)
                         grouplist = line.getGroupIdsJoined()
