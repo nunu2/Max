@@ -691,7 +691,7 @@ def summon(to, nama):
     msg.to = to
     msg.text = "\xe2\x95\x94\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\n"+bb+"\xe2\x95\x9a\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90\xe2\x95\x90"
     msg.contentMetadata ={'MENTION':'{"MENTIONEES":['+aa+']}','EMTVER':'4'}
-    print ["[Command] Tag All"]
+    print ("[Command] Tag All")
     try:
        line.sendMessage(msg)
     except Exception as error:
@@ -699,7 +699,6 @@ def summon(to, nama):
        
 def waktu(secs):
     mins, secs = divmod(secs,60)
-    hours, mins = divmod(mins,60)
     return '%02d Jam %02d Menit %02d Detik' % (hours, mins, secs)      
 
 def cms(string, commands): #/XXX, >XXX, ;XXX, ^XXX, %XXX, $XXX...
