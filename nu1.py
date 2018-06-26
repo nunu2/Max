@@ -598,7 +598,7 @@ backup.pictureStatus = contact.pictureStatus
 #backup.pictureStatus = contact.pictureStatus
                                   
 #~~~~~~~~~••~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~     
- def restart_program():
+def restart_program():
     python = sys.executable
     os.execl(python, python, * sys.argv)
     
