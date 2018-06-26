@@ -13,32 +13,37 @@ from googletrans import Translator
 #==============================================================================#
 botStart = time.time()
 #==============================================================================#
-line = LINE("EuYDLKLWJMd6fPMlc4wf.4YSrMg2oNLZ3c2qS97Qi+W.euhH6QE1ncQ/E2Din2fiy/WrkBt4YX4GgW38NFj6EcE=")
+#line = LINE("EuYDLKLWJMd6fPMlc4wf.4YSrMg2oNLZ3c2qS97Qi+W.euhH6QE1ncQ/E2Din2fiy/WrkBt4YX4GgW38NFj6EcE=")
 #line = LINE()
 #line = LINE('EsWxrB4tKn6gC6TFI5C7.6s2jZdrOy8zaUkEfxHsR1W.DgrqvMHxZTAtX3m4jYOE8Ur7iqZm4P7/VvXmsYU0RHY=')
-line.log("Auth Token : " + str(line.authToken))
-line.log("Timeline Token : " + str(line.tl.channelAccessToken))
+#line.log("Auth Token : " + str(line.authToken))
+#line.log("Timeline Token : " + str(line.tl.channelAccessToken))
 
 #ki = LINE()
-ki = LINE('EsYg5wUN5nLcVCxSJ3z0.iDa9AVYz6rFwW13kJ4ITGa.GZ88i3wkxYGSzkKQH0z8CMlFXSw6+rNf/8oQWg/po4I=')
-ki.log("Auth Token : " + str(ki.authToken))
-ki.log("Timeline Token : " + str(ki.tl.channelAccessToken))
+#ki = LINE('EsYg5wUN5nLcVCxSJ3z0.iDa9AVYz6rFwW13kJ4ITGa.GZ88i3wkxYGSzkKQH0z8CMlFXSw6+rNf/8oQWg/po4I=')
+#ki.log("Auth Token : " + str(ki.authToken))
+#ki.log("Timeline Token : " + str(ki.tl.channelAccessToken))
 
 #kk = LINE()
-kk = LINE('EsPCvQELzdTx7aGiw3K3.qsK61HExwlmqEBinYsMjuW.aEx4uTdikUhEbFfJUhEEeRODvzjDApqzINgiA2ii3fk=')
-kk.log("Auth Token : " + str(kk.authToken))
-kk.log("Timeline Token : " + str(kk.tl.channelAccessToken))
+#kk = LINE('EsPCvQELzdTx7aGiw3K3.qsK61HExwlmqEBinYsMjuW.aEx4uTdikUhEbFfJUhEEeRODvzjDApqzINgiA2ii3fk=')
+#kk.log("Auth Token : " + str(kk.authToken))
+#kk.log("Timeline Token : " + str(kk.tl.channelAccessToken))
 
 #kc = LINE()
-kc = LINE('Esou9R5EfuroC6Uxf7mb.K25tKOCA99q9Zhkth9BFgW.eL/HWu05JVIdCHC23PMpatmt+CgwLVOQUPP3Wtol4mo=')
-kc.log("Auth Token : " + str(kc.authToken))
-kc.log("Timeline Token : " + str(kc.tl.channelAccessToken))
+#kc = LINE('Esou9R5EfuroC6Uxf7mb.K25tKOCA99q9Zhkth9BFgW.eL/HWu05JVIdCHC23PMpatmt+CgwLVOQUPP3Wtol4mo=')
+#kc.log("Auth Token : " + str(kc.authToken))
+#kc.log("Timeline Token : " + str(kc.tl.channelAccessToken))
 
 #ke = LINE()
-ke = LINE('EsGOODOrQFCDp5zBqGma.pqoBzMdkYYOpcZZ1vQYTYG.8gN2GCVDaFJE766OspNPYiXVFg9G8KIZZQG34ZlsSTU=')
-ke.log("Auth Token : " + str(ke.authToken))
-ke.log("Timeline Token : " + str(ke.tl.channelAccessToken))
+#ke = LINE('EsGOODOrQFCDp5zBqGma.pqoBzMdkYYOpcZZ1vQYTYG.8gN2GCVDaFJE766OspNPYiXVFg9G8KIZZQG34ZlsSTU=')
+#ke.log("Auth Token : " + str(ke.authToken))
+#ke.log("Timeline Token : " + str(ke.tl.channelAccessToken))
 
+line = LINE("EuYDLKLWJMd6fPMlc4wf.4YSrMg2oNLZ3c2qS97Qi+W.euhH6QE1ncQ/E2Din2fiy/WrkBt4YX4GgW38NFj6EcE=")
+ki = LINE("EuJMO4zMJuVIB9Q7r6Kd.ZumT2/Y29n7tOJ4IwPo4tq.7iNJvgf7kfqhYzxqffWaZ9Xy/sPVnTXDvSOAi5zoGVc=")
+kk = LINE("EufjpqADebzNQpbd6dEd.SPS+quoffhJbcv30K1vAdq.fILrF4NH6a+DGt2vwdX3nezm2rx6mbU+IjBd++1RgHQ=")
+kc = LINE("EuYHclxrzqW0XDSCiiw0.ZaBHUQRqncLKKv+uKgw/qa.VKgQeUjmWt79dLrKaLwJVzz8PCvzVj+FKBKI8Oezs/s=")
+ke = LINE("EuiBvYshQqZHJSzRAV3e.lVN3XpWByvHZ/lHSAQFaBG.b7z7iEocCtaW7H4Z8H4m/zTdzUxwBKKDMnliuhm91v8=")
 
 print ("Login Succes")
 
