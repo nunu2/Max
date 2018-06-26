@@ -17,10 +17,10 @@ line.log("Auth Token : " + str(line.authToken))
 channelToken = line.getChannelResult()
 line.log("Channel Token : " + str(channelToken))
 
-#ki1 = LINE()
-#ki1.log("Auth Token : " + str(line.authToken))
-#channelToken = ki1.getChannelResult()
-#ki1.log("Channel Token : " + str(channelToken))
+ki1 = LINE()
+ki1.log("Auth Token : " + str(line.authToken))
+channelToken = ki1.getChannelResult()
+ki1.log("Channel Token : " + str(channelToken))
 
 #ki2 = LINE()
 #ki2.log("Auth Token : " + str(line.authToken))
@@ -410,9 +410,9 @@ def helptexttospeech():
 ╚══════════════════════
 """
 
-KAC = [line]
+KAC = [line,ki1]
 mid = line.getProfile().mid
-#Amid1 = ki1.getProfile().mid
+Amid1 = ki1.getProfile().mid
 #Amid2 = ki2.getProfile().mid
 #Amid3 = ki3.getProfile().mid
 #Amid4 = ki4.getProfile().mid
@@ -537,11 +537,11 @@ mybackup.statusMessage = contact.statusMessage
 mybackup.pictureStatus = contact.pictureStatus
 
 
-#contact = ki1.getProfile()
-#backup = ki1.getProfile()
-#backup.displayName = contact.displayName
-#backup.statusMessage = contact.statusMessage
-#backup.pictureStatus = contact.pictureStatus
+contact = ki1.getProfile()
+backup = ki1.getProfile()
+backup.displayName = contact.displayName
+backup.statusMessage = contact.statusMessage
+backup.pictureStatus = contact.pictureStatus
 
 #contact = ki2.getProfile()
 #backup = ki2.getProfile()
