@@ -1112,20 +1112,20 @@ def bot(op):
                        print e
         if op.type == 13:
             if mid in op.param3:
-                G = cl.getGroup(op.param1)
+                G = line.getGroup(op.param1)
                 if wait["autoJoin"] == True:
                     if wait["autoCancel"]["on"] == True:
                         if len(G.members) <= wait["autoCancel"]["members"]:
-                            cl.rejectGroupInvitation(op.param1)
+                            line.rejectGroupInvitation(op.param1)
                         else:
-                            cl.acceptGroupInvitation(op.param1)
-                        cl.sendText(op.param1, "ระบบกันรันทำงาน.\n[by'Ҩఖণಖஇ↭ধัюӄՁ่গს]\nhttp://line.me/ti/p/~antmod.")
+                            line.acceptGroupInvitation(op.param1)
+                        line.sendText(op.param1, "ระบบกันรันทำงาน.\n[by'Ҩఖণಖஇ↭ধัюӄՁ่গს]\nhttp://line.me/ti/p/~antmod.")
                     else:
-                        cl.acceptGroupInvitation(op.param1)
-                        cl.sendText(op.param1, "ระบบกันรันทำงาน.\n[by'Ҩఖণಖஇ↭ধัюӄՁ่গს]\nhttp://line.me/ti/p/~antmod.")
+                        line.acceptGroupInvitation(op.param1)
+                        line.sendText(op.param1, "ระบบกันรันทำงาน.\n[by'Ҩఖণಖஇ↭ধัюӄՁ่গს]\nhttp://line.me/ti/p/~antmod.")
                 elif wait["autoCancel"]["on"] == True:
                     if len(G.members) <= wait["autoCancel"]["members"]:
-                        cl.rejectGroupInvitation(op.param1)
+                        line.rejectGroupInvitation(op.param1)
             else:
                 Inviter = op.param3.replace("",',')
                 InviterX = Inviter.split(",")
@@ -1135,9 +1135,9 @@ def bot(op):
                 if matched_list == []:
                     pass
                 else:
-                    cl.cancelGroupInvitation(op.param1, matched_list)
+                    line.cancelGroupInvitation(op.param1, matched_list)
             if Amid1 in op.param3:
-                G = cl.getGroup(op.param1)
+                G = line.getGroup(op.param1)
                 if wait["autoJoin"] == True:
                     if wait["autoCancel"]["on"] == True:
                         if len(G.members) <= wait["autoCancel"]["members"]:
@@ -1160,7 +1160,7 @@ def bot(op):
                 else:
                     ki1.cancelGroupInvitation(op.param1, matched_list)
             if Amid2 in op.param3:
-                G = cl.getGroup(op.param1)
+                G = line.getGroup(op.param1)
                 if wait["autoJoin"] == True:
                     if wait["autoCancel"]["on"] == True:
                         if len(G.members) <= wait["autoCancel"]["members"]:
@@ -1208,7 +1208,7 @@ def bot(op):
                  except Exception, e:
                            print e
         if op.type == 13:
-            G = cl.getGroup(op.param1)
+            G = line.getGroup(op.param1)
             I = G.creator
             if not op.param2 in Bots:
                 if wait["protectionOn"] == True:  
@@ -1302,7 +1302,7 @@ def bot(op):
                     G.preventJoinByTicket = False
                     ki1.updateGroup(G)
                     Ti = ki1.reissueGroupTicket(op.param1)
-                    cl.acceptGroupInvitationByTicket(op.param1,Ti)
+                    line.acceptGroupInvitationByTicket(op.param1,Ti)
                     time.sleep(0.01)
                     ki1.acceptGroupInvitationByTicket(op.param1,Ti)
                     time.sleep(0.01)
@@ -1324,8 +1324,8 @@ def bot(op):
                     ki10.acceptGroupInvitationByTicket(op.param1,Ti)
 X = cl.getGroup(op.param1)
                     X.preventJoinByTicket = True
-                    cl.updateGroup(X)
-                    Ti = cl.reissueGroupTicket(op.param1)                    
+                    line.updateGroup(X)
+                    Ti = line.reissueGroupTicket(op.param1)                    
                     if op.param2 in wait["blacklist"]:
                         pass
                     if op.param2 in wait["whitelist"]:
@@ -1355,7 +1355,7 @@ X = cl.getGroup(op.param1)
                     X.preventJoinByTicket = False
                     ki2.updateGroup(X)
                     Ti = ki2.reissueGroupTicket(op.param1)
-                    cl.acceptGroupInvitationByTicket(op.param1,Ti)
+                    line.acceptGroupInvitationByTicket(op.param1,Ti)
                     time.sleep(0.01)
                     ki1.acceptGroupInvitationByTicket(op.param1,Ti)
                     time.sleep(0.01)
@@ -1409,7 +1409,7 @@ X = cl.getGroup(op.param1)
                     X.preventJoinByTicket = False
                     ki3.updateGroup(X)
                     Ti = ki3.reissueGroupTicket(op.param1)
-                    cl.acceptGroupInvitationByTicket(op.param1,Ti)
+                    line.acceptGroupInvitationByTicket(op.param1,Ti)
                     time.sleep(0.01)
                     ki1.acceptGroupInvitationByTicket(op.param1,Ti)
                     time.sleep(0.01)
@@ -1461,7 +1461,7 @@ X = cl.getGroup(op.param1)
                     X.preventJoinByTicket = False
                     ki4.updateGroup(X)
                     Ti = ki4.reissueGroupTicket(op.param1)
-                    cl.acceptGroupInvitationByTicket(op.param1,Ti)
+                    line.acceptGroupInvitationByTicket(op.param1,Ti)
                     time.sleep(0.01)
                     ki1.acceptGroupInvitationByTicket(op.param1,Ti)
                     time.sleep(0.01)
@@ -1513,7 +1513,7 @@ X = cl.getGroup(op.param1)
                     X.preventJoinByTicket = False
                     ki5.updateGroup(X)
                     Ti = ki5.reissueGroupTicket(op.param1)
-                    cl.acceptGroupInvitationByTicket(op.param1,Ti)
+                    line.acceptGroupInvitationByTicket(op.param1,Ti)
                     time.sleep(0.01)
                     ki1.acceptGroupInvitationByTicket(op.param1,Ti)
                     time.sleep(0.01)
@@ -1565,7 +1565,7 @@ X = cl.getGroup(op.param1)
                     X.preventJoinByTicket = False
                     ki6.updateGroup(X)
                     Ti = ki6.reissueGroupTicket(op.param1)
-                    cl.acceptGroupInvitationByTicket(op.param1,Ti)
+                    line.acceptGroupInvitationByTicket(op.param1,Ti)
                     time.sleep(0.01)
                     ki1.acceptGroupInvitationByTicket(op.param1,Ti)
                     time.sleep(0.01)
@@ -1619,7 +1619,7 @@ X = cl.getGroup(op.param1)
                     X.preventJoinByTicket = False
                     ki7.updateGroup(X)
                     Ti = ki7.reissueGroupTicket(op.param1)
-                    cl.acceptGroupInvitationByTicket(op.param1,Ti)
+                    line.acceptGroupInvitationByTicket(op.param1,Ti)
                     time.sleep(0.01)
                     ki1.acceptGroupInvitationByTicket(op.param1,Ti)
                     time.sleep(0.01)
@@ -1671,7 +1671,7 @@ X = cl.getGroup(op.param1)
                     X.preventJoinByTicket = False
                     ki8.updateGroup(X)
                     Ti = ki8.reissueGroupTicket(op.param1)
-                    cl.acceptGroupInvitationByTicket(op.param1,Ti)
+                    line.acceptGroupInvitationByTicket(op.param1,Ti)
                     time.sleep(0.01)
                     ki1.acceptGroupInvitationByTicket(op.param1,Ti)
                     time.sleep(0.01)
@@ -1723,7 +1723,7 @@ X = cl.getGroup(op.param1)
                     X.preventJoinByTicket = False
                     ki9.updateGroup(X)
                     Ti = ki9.reissueGroupTicket(op.param1)
-                    cl.acceptGroupInvitationByTicket(op.param1,Ti)
+                    line.acceptGroupInvitationByTicket(op.param1,Ti)
                     time.sleep(0.01)
                     ki1.acceptGroupInvitationByTicket(op.param1,Ti)
                     time.sleep(0.01)
@@ -1776,7 +1776,7 @@ X = cl.getGroup(op.param1)
                     X.preventJoinByTicket = False
                     ki10.updateGroup(X)
                     Ti = ki10.reissueGroupTicket(op.param1)
-                    cl.acceptGroupInvitationByTicket(op.param1,Ti)
+                    line.acceptGroupInvitationByTicket(op.param1,Ti)
                     time.sleep(0.01)
                     ki1.acceptGroupInvitationByTicket(op.param1,Ti)
                     time.sleep(0.01)
