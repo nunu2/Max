@@ -410,8 +410,8 @@ def helptexttospeech():
 ╚══════════════════════
 """
 
-KAC=[cl]
-mid = cl.getProfile().mid
+KAC=[line]
+mid = line.getProfile().mid
 #Amid1 = ki1.getProfile().mid
 #Amid2 = ki2.getProfile().mid
 #Amid3 = ki3.getProfile().mid
@@ -430,7 +430,7 @@ autocancel = {}
 autoinvite = []
 autoleaveroom = []
 targets = []
-mid = cl.getProfile().mid
+mid = line.getProfile().mid
 Bots = ["ใส่เอมไอดี",mid]
 self = ["ใส่เอมไอดี",mid]
 admin = "ใส่เอมไอดี"
@@ -454,7 +454,7 @@ wait = {
     'timeline':True,
     'autoAdd':False,
     'message':"[ตอบรับ อัตโนมัติ]",
-    'message':"Thanks for add Me By:Ҩఖণಖஇ↭ধัюӄՁ่গს",
+    'message':"Thanks for add Me SELFBOT",
     "lang":"JP",
     "comment":"AutoLike by Moddark",
     "commentOn":False,
@@ -467,7 +467,7 @@ wait = {
     "wblack":False,
     "dblack":False,
     "clock":False,
-    "cName":"ধัюӄՁ่গს↭",
+    "cName":"SELFBOT",
     "likeOn":False,
     "pname":False,
     "blacklist":{},
@@ -530,6 +530,72 @@ blacklistFile='blacklist.txt'
 pendinglistFile='pendinglist.txt'
       
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~●~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                                    
- #~~~~~~~~~••~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~     
+contact = line.getProfile()
+mybackup = line.getProfile()
+mybackup.displayName = contact.displayName
+mybackup.statusMessage = contact.statusMessage
+mybackup.pictureStatus = contact.pictureStatus
+
+
+#contact = ki1.getProfile()
+#backup = ki1.getProfile()
+#backup.displayName = contact.displayName
+#backup.statusMessage = contact.statusMessage
+#backup.pictureStatus = contact.pictureStatus
+
+#contact = ki2.getProfile()
+#backup = ki2.getProfile()
+#backup.displayName = contact.displayName
+#backup.statusMessage = contact.statusMessage
+#backup.pictureStatus = contact.pictureStatus
+
+#contact = ki3.getProfile()
+#backup = ki3.getProfile()
+#backup.displayName = contact.displayName
+#backup.statusMessage = contact.statusMessage
+#backup.pictureStatus = contact.pictureStatus
+
+#contact = ki4.getProfile()
+#backup = ki4.getProfile()
+#backup.displayName = contact.displayName
+#backup.statusMessage = contact.statusMessage
+#backup.pictureStatus = contact.pictureStatus
+
+#contact = ki5.getProfile()
+#backup = ki5.getProfile()
+#backup.displayName = contact.displayName
+#backup.statusMessage = contact.statusMessage
+#backup.pictureStatus = contact.pictureStatus
+
+#contact = ki6.getProfile()
+#backup = ki6.getProfile()
+#backup.displayName = contact.displayName
+#backup.statusMessage = contact.statusMessage
+#backup.pictureStatus = contact.pictureStatus
+
+#contact = ki7.getProfile()
+#backup = ki7.getProfile()
+#backup.displayName = contact.displayName
+#backup.statusMessage = contact.statusMessage
+#backup.pictureStatus = contact.pictureStatus
+
+#contact = ki8.getProfile()
+#backup = ki8.getProfile()
+#backup.displayName = contact.displayName
+#backup.statusMessage = contact.statusMessage
+#backup.pictureStatus = contact.pictureStatus
+
+#contact = ki9.getProfile()
+#backup = ki9.getProfile()
+#backup.displayName = contact.displayName
+#backup.statusMessage = contact.statusMessage
+#backup.pictureStatus = contact.pictureStatus
+
+#contact = ki10.getProfile()
+#backup = ki10.getProfile()
+#backup.displayName = contact.displayName
+#backup.statusMessage = contact.statusMessage
+#backup.pictureStatus = contact.pictureStatus
+                                  
+#~~~~~~~~~••~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~     
         
