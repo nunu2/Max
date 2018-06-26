@@ -12,10 +12,10 @@ from googletrans import Translator
 #==============================================================================#
 botStart = time.time()
 
-#line = LINE()
-#line.log("Auth Token : " + str(line.authToken))
-#channelToken = line.getChannelResult()
-#line.log("Channel Token : " + str(channelToken))
+line = LINE()
+line.log("Auth Token : " + str(line.authToken))
+channelToken = line.getChannelResult()
+line.log("Channel Token : " + str(channelToken))
 
 #ki1 = LINE()
 #ki1.log("Auth Token : " + str(line.authToken))
@@ -410,7 +410,7 @@ def helptexttospeech():
 ╚══════════════════════
 """
 
-KAC=[line]
+KAC = [line]
 mid = line.getProfile().mid
 #Amid1 = ki1.getProfile().mid
 #Amid2 = ki2.getProfile().mid
