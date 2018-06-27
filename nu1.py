@@ -694,9 +694,8 @@ def summon(to, nama):
     print ("[Command] Tag All")
     try:
        line.sendMessage(msg)
-    except Exception as error:
-       print error
-       
+   except Exception as error:
+       print error       
 def waktu(secs):
     mins, secs = divmod(secs,60)
     return '%02d Jam %02d Menit %02d Detik' % (hours, mins, secs)      
