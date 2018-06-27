@@ -370,6 +370,12 @@ def helpmessage():
                   "╠ SearchImage「Search」" + "\n" + \
                   "╠ ScreenshootWebsite「LinkURL」" + "\n" + \
                   "╚══[🍂 บ อ ท ท ด ล อ ง 🍂]"
+                  "╔═════════════════┓" 
+                  "╠⌬   ติ ด ต่ อ ส อ บ ถ า ม    ⌬" 
+                  "╚═════════════════┛" 
+                  "   ────┅═ই۝ई═┅────    " 
+                  "https://line.me/ti/p/t39FP9K59s" 
+                  "   ────┅═ই۝ई═┅────    "                         
     return helpMessage
     
 	def helptexttospeech():
@@ -543,3 +549,51 @@ def helpmessage():
                          "Contoh : IDline 2000m."
     return helpTranslate
 #==============================================================================#
+def lineBot(op):
+    try:
+        if op.type == 0:
+            print ("[ 0 ] END OF OPERATION")
+            return
+        if op.type == 5:
+            print ("[ 5 ] NOTIFIED ADD CONTACT")
+            if settings["autoAdd"] == True:
+                line.sendMessage(op.param1, "แอดมาทำไม หรอ:D".format(str(line.getContact(op.param1).displayName)))
+        if op.type == 13:
+            print ("[ 13 ] NOTIFIED INVITE GROUP")
+            group = line.getGroup(op.param1)
+            if settings["autoJoin"] == True:
+                line.acceptGroupInvitation(op.param1)
+        if op.type == 24:
+            print ("[ 24 ] NOTIFIED LEAVE ROOM")
+            if settings["autoLeave"] == True:
+                line.leaveRoom(op.param1)
+        if op.type == 25:
+            print ("[ 25 ] SEND MESSAGE")
+            msg = op.message
+            text = msg.text
+            msg_id = msg.id
+            receiver = msg.to
+            sender = msg._from
+            if msg.toType == 0:
+                if sender != line.profile.mid:
+                    to = sender
+                else:
+                    to = receiver
+            else:
+                to = receiver
+            if msg.contentType == 0:
+                if text is None:
+                    return
+#==============================================================================#
+                if text.lower() == 'help':
+                    helpMessage = helpmessage()
+                    line.sendMessage(to, str(helpMessage))
+                    line.sendContact(to, "ue32b11986d8e9e5cf70b642cf7ba88ff")
+                elif text.lower() == 'texttospeech':
+                    helpTextToSpeech = helptexttospeech()
+                    line.sendMessage(to, str(helpTextToSpeech))
+                elif text.lower() == 'translate':
+                    helpTranslate = helptranslate()
+                    line.sendMessage(to, str(helpTranslate))
+#==============================================================================#
+
