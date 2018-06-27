@@ -306,3 +306,240 @@ def backupData():
         logError(error)
         return False
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ทดลองนุ~~~~~~~~~~~~~~~~~~~~~~~#
+def helpmessage():
+    helpMessage = "╔══[ บ อ ท ท ด ล อ ง ]" + "\n" + \
+                  "╠ Help" + "\n" + \
+                  "╠ Translate" + "\n" + \
+                  "╠ TextToSpeech" + "\n" + \
+                  "╠══[ Status Command ]" + "\n" + \
+                  "╠ Restart" + "\n" + \
+                  "╠ Runtime" + "\n" + \
+                  "╠ Speed" + "\n" + \
+                  "╠ Status" + "\n" + \
+                  "╠ About" + "\n" + \
+                  "╠══[ Settings Command ]" + "\n" + \
+                  "╠ AutoAdd「On/Off」" + "\n" + \
+                  "╠ AutoJoin「On/Off」" + "\n" + \
+                  "╠ AutoLeave「On/Off」" + "\n" + \
+                  "╠ AutoRead「On/Off」" + "\n" + \
+                  "╠ CheckSticker「On/Off」" + "\n" + \
+                  "╠ DetectMention「On/Off」" + "\n" + \
+                  "╠══[ Self Command ]" + "\n" + \
+                  "╠ Me" + "\n" + \
+                  "╠ MyMid" + "\n" + \
+                  "╠ MyName" + "\n" + \
+                  "╠ MyBio" + "\n" + \
+                  "╠ MyPicture" + "\n" + \
+                  "╠ MyVideoProfile" + "\n" + \
+                  "╠ MyCover" + "\n" + \
+                  "╠ StealContact「Mention」" + "\n" + \
+                  "╠ StealMid「Mention」" + "\n" + \
+                  "╠ StealName「Mention」" + "\n" + \
+                  "╠ StealBio「Mention」" + "\n" + \
+                  "╠ StealPicture「Mention」" + "\n" + \
+                  "╠ StealVideoProfile「Mention」" + "\n" + \
+                  "╠ StealCover「Mention」" + "\n" + \
+                  "╠ CloneProfile「Mention」" + "\n" + \
+                  "╠ RestoreProfile" + "\n" + \
+                  "╠══[ Group Command ]" + "\n" + \
+                  "╠ GroupCreator" + "\n" + \
+                  "╠ GroupId" + "\n" + \
+                  "╠ GroupName" + "\n" + \
+                  "╠ GroupPicture" + "\n" + \
+                  "╠ GroupTicket" + "\n" + \
+                  "╠ GroupTicket「On/Off」" + "\n" + \
+                  "╠ GroupList" + "\n" + \
+                  "╠ GroupMemberList" + "\n" + \
+                  "╠ GroupInfo" + "\n" + \
+                  "╠══[ Special Command ]" + "\n" + \
+                  "╠ Mimic「On/Off」" + "\n" + \
+                  "╠ MimicList" + "\n" + \
+                  "╠ MimicAdd「Mention」" + "\n" + \
+                  "╠ MimicDel「Mention」" + "\n" + \
+                  "╠ Mention" + "\n" + \
+                  "╠ Lurking「On/Off/Reset」" + "\n" + \
+                  "╠ Lurking" + "\n" + \
+                  "╠══[ Media Command ]" + "\n" + \
+                  "╠ Kalender" + "\n" + \
+                  "╠ CheckDate「Date」" + "\n" + \
+                  "╠ InstagramInfo「UserName」" + "\n" + \
+                  "╠ InstagramPost「UserName」" + "\n" + \
+                  "╠ SearchYoutube「Search」" + "\n" + \
+                  "╠ SearchMusic「Search」" + "\n" + \
+                  "╠ SearchLyric「Search」" + "\n" + \
+                  "╠ SearchImage「Search」" + "\n" + \
+                  "╠ ScreenshootWebsite「LinkURL」" + "\n" + \
+                  "╚══[🍂 บ อ ท ท ด ล อ ง 🍂]"
+    return helpMessage
+    
+	def helptexttospeech():
+    helpTextToSpeech =   "╔══[ 🐾 ระบบคิกเกอร์ 🐾 ]" + "\n" + \
+                         "╠ af : Afrikaans" + "\n" + \
+                         "╠ sq : Albanian" + "\n" + \
+                         "╠ ar : Arabic" + "\n" + \
+                         "╠ hy : Armenian" + "\n" + \
+                         "╠ bn : Bengali" + "\n" + \
+                         "╠ ca : Catalan" + "\n" + \
+                         "╠ zh : Chinese" + "\n" + \
+                         "╠ zh-cn : Chinese (Mandarin/China)" + "\n" + \
+                         "╠ zh-tw : Chinese (Mandarin/Taiwan)" + "\n" + \
+                         "╠ zh-yue : Chinese (Cantonese)" + "\n" + \
+                         "╠ hr : Croatian" + "\n" + \
+                         "╠ cs : Czech" + "\n" + \
+                         "╠ da : Danish" + "\n" + \
+                         "╠ nl : Dutch" + "\n" + \
+                         "╠ en : English" + "\n" + \
+                         "╠ en-au : English (Australia)" + "\n" + \
+                         "╠ en-uk : English (United Kingdom)" + "\n" + \
+                         "╠ en-us : English (United States)" + "\n" + \
+                         "╠ eo : Esperanto" + "\n" + \
+                         "╠ fi : Finnish" + "\n" + \
+                         "╠ fr : French" + "\n" + \
+                         "╠ de : German" + "\n" + \
+                         "╠ el : Greek" + "\n" + \
+                         "╠ hi : Hindi" + "\n" + \
+                         "╠ hu : Hungarian" + "\n" + \
+                         "╠ is : Icelandic" + "\n" + \
+                         "╠ id : Indonesian" + "\n" + \
+                         "╠ it : Italian" + "\n" + \
+                         "╠ ja : Japanese" + "\n" + \
+                         "╠ km : Khmer (Cambodian)" + "\n" + \
+                         "╠ ko : Korean" + "\n" + \
+                         "╠ la : Latin" + "\n" + \
+                         "╠ lv : Latvian" + "\n" + \
+                         "╠ mk : Macedonian" + "\n" + \
+                         "╠ no : Norwegian" + "\n" + \
+                         "╠ pl : Polish" + "\n" + \
+                         "╠ pt : Portuguese" + "\n" + \
+                         "╠ ro : Romanian" + "\n" + \
+                         "╠ ru : Russian" + "\n" + \
+                         "╠ sr : Serbian" + "\n" + \
+                         "╠ si : Sinhala" + "\n" + \
+                         "╠ sk : Slovak" + "\n" + \
+                         "╠ es : Spanish" + "\n" + \
+                         "╠ es-es : Spanish (Spain)" + "\n" + \
+                         "╠ es-us : Spanish (United States)" + "\n" + \
+                         "╠ sw : Swahili" + "\n" + \
+                         "╠ sv : Swedish" + "\n" + \
+                         "╠ ta : Tamil" + "\n" + \
+                         "╠ th : Thai" + "\n" + \
+                         "╠ tr : Turkish" + "\n" + \
+                         "╠ uk : Ukrainian" + "\n" + \
+                         "╠ vi : Vietnamese" + "\n" + \
+                         "╠ cy : Welsh" + "\n" + \
+                         "╚══[ Jangan Typo ]" + "\n" + "\n\n" + \
+                          "Contoh : IDLine 2000m."
+    return helpTextToSpeech
+    
+	def helptranslate():
+    helpTranslate =    "╔══[ T R A N S L A T E ]" + "\n" + \
+                       "╠ af : afrikaans" + "\n" + \
+                       "╠ sq : albanian" + "\n" + \
+                       "╠ am : amharic" + "\n" + \
+                       "╠ ar : arabic" + "\n" + \
+                       "╠ hy : armenian" + "\n" + \
+                       "╠ az : azerbaijani" + "\n" + \
+                       "╠ eu : basque" + "\n" + \
+                       "╠ be : belarusian" + "\n" + \
+                       "╠ bn : bengali" + "\n" + \
+                       "╠ bs : bosnian" + "\n" + \
+                       "╠ bg : bulgarian" + "\n" + \
+                       "╠ ca : catalan" + "\n" + \
+                       "╠ ceb : cebuano" + "\n" + \
+                       "╠ ny : chichewa" + "\n" + \
+                       "╠ zh-cn : chinese (simplified)" + "\n" + \
+                       "╠ zh-tw : chinese (traditional)" + "\n" + \
+                       "╠ co : corsican" + "\n" + \
+                       "╠ hr : croatian" + "\n" + \
+                       "╠ cs : czech" + "\n" + \
+                       "╠ da : danish" + "\n" + \
+                       "╠ nl : dutch" + "\n" + \
+                       "╠ en : english" + "\n" + \
+                       "╠ eo : esperanto" + "\n" + \
+                       "╠ et : estonian" + "\n" + \
+                       "╠ tl : filipino" + "\n" + \
+                       "╠ fi : finnish" + "\n" + \
+                       "╠ fr : french" + "\n" + \
+                       "╠ fy : frisian" + "\n" + \
+                       "╠ gl : galician" + "\n" + \
+                       "╠ ka : georgian" + "\n" + \
+                       "╠ de : german" + "\n" + \
+                       "╠ el : greek" + "\n" + \
+                       "╠ gu : gujarati" + "\n" + \
+                       "╠ ht : haitian creole" + "\n" + \
+                       "╠ ha : hausa" + "\n" + \
+                       "╠ haw : hawaiian" + "\n" + \
+                       "╠ iw : hebrew" + "\n" + \
+                       "╠ hi : hindi" + "\n" + \
+                       "╠ hmn : hmong" + "\n" + \
+                       "╠ hu : hungarian" + "\n" + \
+                       "╠ is : icelandic" + "\n" + \
+                       "╠ ig : igbo" + "\n" + \
+                       "╠ id : indonesian" + "\n" + \
+                       "╠ ga : irish" + "\n" + \
+                       "╠ it : italian" + "\n" + \
+                       "╠ ja : japanese" + "\n" + \
+                       "╠ jw : javanese" + "\n" + \
+                       "╠ kn : kannada" + "\n" + \
+                       "╠ kk : kazakh" + "\n" + \
+                       "╠ km : khmer" + "\n" + \
+                       "╠ ko : korean" + "\n" + \
+                       "╠ ku : kurdish (kurmanji)" + "\n" + \
+                       "╠ ky : kyrgyz" + "\n" + \
+                       "╠ lo : lao" + "\n" + \
+                       "╠ la : latin" + "\n" + \
+                       "╠ lv : latvian" + "\n" + \
+                       "╠ lt : lithuanian" + "\n" + \
+                       "╠ lb : luxembourgish" + "\n" + \
+                       "╠ mk : macedonian" + "\n" + \
+                       "╠ mg : malagasy" + "\n" + \
+                       "╠ ms : malay" + "\n" + \
+                       "╠ ml : malayalam" + "\n" + \
+                       "╠ mt : maltese" + "\n" + \
+                       "╠ mi : maori" + "\n" + \
+                       "╠ mr : marathi" + "\n" + \
+                       "╠ mn : mongolian" + "\n" + \
+                       "╠ my : myanmar (burmese)" + "\n" + \
+                       "╠ ne : nepali" + "\n" + \
+                       "╠ no : norwegian" + "\n" + \
+                       "╠ ps : pashto" + "\n" + \
+                       "╠ fa : persian" + "\n" + \
+                       "╠ pl : polish" + "\n" + \
+                       "╠ pt : portuguese" + "\n" + \
+                       "╠ pa : punjabi" + "\n" + \
+                       "╠ ro : romanian" + "\n" + \
+                       "╠ ru : russian" + "\n" + \
+                       "╠ sm : samoan" + "\n" + \
+                       "╠ gd : scots gaelic" + "\n" + \
+                       "╠ sr : serbian" + "\n" + \
+                       "╠ st : sesotho" + "\n" + \
+                       "╠ sn : shona" + "\n" + \
+                       "╠ sd : sindhi" + "\n" + \
+                       "╠ si : sinhala" + "\n" + \
+                       "╠ sk : slovak" + "\n" + \
+                       "╠ sl : slovenian" + "\n" + \
+                       "╠ so : somali" + "\n" + \
+                       "╠ es : spanish" + "\n" + \
+                       "╠ su : sundanese" + "\n" + \
+                       "╠ sw : swahili" + "\n" + \
+                       "╠ sv : swedish" + "\n" + \
+                       "╠ tg : tajik" + "\n" + \
+                       "╠ ta : tamil" + "\n" + \
+                       "╠ te : telugu" + "\n" + \
+                       "╠ th : thai" + "\n" + \
+                       "╠ tr : turkish" + "\n" + \
+                       "╠ uk : ukrainian" + "\n" + \
+                       "╠ ur : urdu" + "\n" + \
+                       "╠ uz : uzbek" + "\n" + \
+                       "╠ vi : vietnamese" + "\n" + \
+                       "╠ cy : welsh" + "\n" + \
+                       "╠ xh : xhosa" + "\n" + \
+                       "╠ yi : yiddish" + "\n" + \
+                       "╠ yo : yoruba" + "\n" + \
+                       "╠ zu : zulu" + "\n" + \
+                       "╠ fil : Filipino" + "\n" + \
+                       "╠ he : Hebrew" + "\n" + \
+                       "╚══[ Jangan Typo ]" + "\n" + "\n\n" + \
+                         "Contoh : IDline 2000m."
+    return helpTranslate
+#==============================================================================#
