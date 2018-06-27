@@ -375,7 +375,7 @@ def helpmessage():
                   "╚═════════════════┛" + "\n" + \
                   "   ────┅═ই۝ई═┅────    " + "\n" + \
                   "https://line.me/ti/p/t39FP9K59s" + "\n" + \
-                  "   ────┅═ই۝ई═┅────    "                         
+                  "   ────┅═ই۝ई═┅────    " + "\n" + \                        
     return helpMessage
     
 	def helptexttospeech():
