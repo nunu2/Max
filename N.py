@@ -435,7 +435,7 @@ def helptexttospeech():
                           "Contoh : IDLine 2000m."
     return helpTextToSpeech
     
-	def helptranslate():
+def helptranslate():
     helpTranslate =    "╔══[ T R A N S L A T E ]" + "\n" + \
                        "╠ af : afrikaans" + "\n" + \
                        "╠ sq : albanian" + "\n" + \
