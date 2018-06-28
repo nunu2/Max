@@ -321,7 +321,7 @@ def helpmessage():
                   "╠══[ Status Command ]" + "\n" + \
                   "╠ Restart" + "\n" + \
                   "╠ Runtime" + "\n" + \
-                  "╠ Speed" + "\n" + \
+                  "╠ Speed > เช็คความเร็ว " + "\n" + \
                   "╠ Status" + "\n" + \
                   "╠ About" + "\n" + \
                   "╠══[ Settings Command ]" + "\n" + \
@@ -350,14 +350,14 @@ def helpmessage():
                   "╠ RestoreProfile" + "\n" + \
                   "╠══[ Group Command ]" + "\n" + \
                   "╠ GroupCreator" + "\n" + \
-                  "╠ GroupId" + "\n" + \
-                  "╠ GroupName" + "\n" + \
-                  "╠ GroupPicture" + "\n" + \
+                  "╠ GroupId :ไอดีกลุ่ม" + "\n" + \
+                  "╠ GroupName :ขโมยชื่อกลุ่ม" + "\n" + \
+                  "╠ GroupPicture :ขโมยรูปกลุ่ม" + "\n" + \
                   "╠ GroupTicket" + "\n" + \
                   "╠ GroupTicket「On/Off」" + "\n" + \
-                  "╠ GroupList" + "\n" + \
-                  "╠ GroupMemberList" + "\n" + \
-                  "╠ GroupInfo" + "\n" + \
+                  "╠ GroupList :> ดูกลุ่มที่เรามีอยู่ทั้งหมด" + "\n" + \
+                  "╠ GroupMemberList :> เช็ครายชื่อสมาชิคในกลุ่ม" + "\n" + \
+                  "╠ GroupInfo :ข้อมูลกลุ่ม" + "\n" + \
                   "╠══[ Special Command ]" + "\n" + \
                   "╠ Mimic「On/Off」" + "\n" + \
                   "╠ MimicList" + "\n" + \
@@ -378,15 +378,15 @@ def helpmessage():
                   "╠ ScreenshootWebsite「LinkURL」" + "\n" + \
                   "╚══[🍂 ติ ด ต่ อ ส อ บ ถ า ม 🍂]" + "\n" + \
                   "╔═════════════════════┓" + "\n" + \
-                  "╠⌬https://line.me/ti/p/t39FP9K59s⌬ " + "\n" + \
+                  "╠⌬https://line.me/ti/p/t39FP9K59s ⌬ " + "\n" + \
                   "╚═════════════════════┛" 
                                      
     return helpMessage
     
 def helptexttospeech():
     helpTextToSpeech =   "╔══[ 🐾 ระบบคิกเกอร์ 🐾 ]" + "\n" + \
-                         "╠ af : Afrikaans" + "\n" + \
-                         "╠ sq : Albanian" + "\n" + \
+                         "╠ มาหำ :> เรียกคิกเข้ากลุ่ม" + "\n" + \
+                         "╠ หนีหำ :> คิกออกจากกลุ่ม" + "\n" + \
                          "╠ ar : Arabic" + "\n" + \
                          "╠ hy : Armenian" + "\n" + \
                          "╠ bn : Bengali" + "\n" + \
@@ -1680,7 +1680,7 @@ def lineBot(op):
                     ret_ += "\n╠ STICKER ID : {}".format(stk_id)
                     ret_ += "\n╠ STICKER PACKAGES ID : {}".format(pkg_id)
                     ret_ += "\n╠ STICKER VERSION : {}".format(stk_ver)
-                    ret_ += "\n╠ STICKER URL : line://shop/detail/{}".format(pkg_id)
+                    ret_ += "\n╠ สติ๊กเก้อฟรี กดเลย 👉 : line://shop/detail/{}".format(pkg_id)
                     ret_ += "\n╚══[ Finish ]"
                     line.sendMessage(to, str(ret_))
 
@@ -1741,7 +1741,7 @@ def lineBot(op):
              ginfo = line.getGroup(op.param1)
              contact = line.getContact(op.param2)
              image = "http://dl.profile.line.naver.jp/" + contact.pictureStatus
-             line.sendMessage(op.param1,"Hi " + line.getContact(op.param2).displayName + "\nWelcome To ☞ " + str(ginfo.name) + " ☜" + "\njangan lupa tikung aim\nDan Semoga Betah Disini ye ^_^")
+             line.sendMessage(op.param1,"สวัสดี " + line.getContact(op.param2).displayName + "\nยินดีต้อนรับเข้าสู่กลุ่ม ☞ " + str(ginfo.name) + " ☜" + "\nมาแล้วไหนแก้ผ้าไห้ดูหน่อยสิ ทำตัวน่ารักๆนะ ^_^")
              line.sendImageWithURL(op.param1,image)
 
         if op.type == 15:
@@ -1753,7 +1753,7 @@ def lineBot(op):
              contact = line.getContact(op.param2)
              image = "http://dl.profile.line.naver.jp/" + contact.pictureStatus
              line.sendImageWithURL(op.param1,image)
-             line.sendMessage(op.param1,"Good Bye " + line.getContact(op.param2).displayName + "\nSee You Next Time . . . (p′︵‵。)")
+             line.sendMessage(op.param1,"Bye Bye " + line.getContact(op.param2).displayName + "\nแล้วพบกันใหม่ นะจ๊ะ . . . (p′︵‵。)")
 #==============================================================================#
         if op.type == 55:
             print ("[ 55 ] NOTIFIED READ MESSAGE")
