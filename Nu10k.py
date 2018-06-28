@@ -12,31 +12,151 @@ from googletrans import Translator
 #==============================================================================#
 botStart = time.time()
 
+
 #line = LINE()
 #line = LINE("AuthToken")
 #line = LINE("Email","Password")
+line = LINE()
+line.log("Auth Token : " + str(line.authToken))
+channelToken = line.getChannelResult()
+line.log("Channel Token : " + str(channelToken))
+
 #line = LINE()
 #line.log("Auth Token : " + str(line.authToken))
 #channelToken = line.getChannelResult()
 #line.log("Channel Token : " + str(channelToken))
 
-line = LINE("EuYDLKLWJMd6fPMlc4wf.4YSrMg2oNLZ3c2qS97Qi+W.euhH6QE1ncQ/E2Din2fiy/WrkBt4YX4GgW38NFj6EcE=")
+#line = LINE()
+#line.log("Auth Token : " + str(line.authToken))
+#channelToken = line.getChannelResult()
+#line.log("Channel Token : " + str(channelToken))
 
-readOpen = codecs.open("read.json","r","utf-8")
-settingsOpen = codecs.open("temp.json","r","utf-8")
+#line = LINE()
+#line.log("Auth Token : " + str(line.authToken))
+#channelToken = line.getChannelResult()
+#line.log("Channel Token : " + str(channelToken))
+
+#line = LINE()
+#line.log("Auth Token : " + str(line.authToken))
+#channelToken = line.getChannelResult()
+#line.log("Channel Token : " + str(channelToken))
+
+#line = LINE()
+#line.log("Auth Token : " + str(line.authToken))
+#channelToken = line.getChannelResult()
+#line.log("Channel Token : " + str(channelToken))
+
+#line = LINE()
+#line.log("Auth Token : " + str(line.authToken))
+#channelToken = line.getChannelResult()
+#line.log("Channel Token : " + str(channelToken))
+
+#line = LINE()
+#line.log("Auth Token : " + str(line.authToken))
+#channelToken = line.getChannelResult()
+#line.log("Channel Token : " + str(channelToken))
+
+#line = LINE()
+#line.log("Auth Token : " + str(line.authToken))
+#channelToken = line.getChannelResult()
+#line.log("Channel Token : " + str(channelToken))
+
+#line = LINE()
+#line.log("Auth Token : " + str(line.authToken))
+#channelToken = line.getChannelResult()
+#line.log("Channel Token : " + str(channelToken))
+
+print ("Login Succes")
 
 lineMID = line.profile.mid
 lineProfile = line.getProfile()
 lineSettings = line.getSettings()
+
+#ki1MID = ki1.profile.mid
+#ki1Profile = ki1.getProfile()
+#ki1Settings = ki1.getSettings()
+
+#ki2MID = ki2.profile.mid
+#ki2Profile = ki2.getProfile()
+#ki2Settings = ki2.getSettings()
+
+#ki3MID = ki3.profile.mid
+#ki3Profile = ki3.getProfile()
+#ki3Settings = ki3.getSettings()
+
+#ki4MID = ki4.profile.mid
+#ki4Profile = ki4.getProfile()
+#ki4Settings = ki4.getSettings()
+
+#ki5MID = ki5.profile.mid
+#ki5Profile = ki5.getProfile()
+#ki5Settings = ki5.getSettings()
+
+#ki6MID = ki6.profile.mid
+#ki6Profile = ki6.getProfile()
+#ki6Settings = ki6.getSettings()
+
+#ki7MID = ki7.profile.mid
+#ki7Profile = ki7.getProfile()
+#ki7Settings = ki7.getSettings()
+
+#ki8MID = ki8.profile.mid
+#ki8Profile = ki8.getProfile()
+#ki8Settings = ki8.getSettings()
+
+#ki9MID = ki9.profile.mid
+#ki9Profile = ki9.getProfile()
+#ki9Settings = ki9.getSettings()
+
+#ki10MID = ki10.profile.mid
+#ki10Profile = ki10.getProfile()
+#ki10Settings = ki10.getSettings()
+
+
+#oepoll = OEPoll(ki10)
+#oepoll = OEPoll(ki9)
+#oepoll = OEPoll(ki8)
+#oepoll = OEPoll(ki7)
+#oepoll = OEPoll(ki6)
+#oepoll = OEPoll(ki5)
+#oepoll = OEPoll(ki4)
+#oepoll = OEPoll(ki3)
+#oepoll = OEPoll(ki2)
+#oepoll = OEPoll(ki1)
 oepoll = OEPoll(line)
+#call = Call(line)
+readOpen = codecs.open("read.json","r","utf-8")
+settingsOpen = codecs.open("temp.json","r","utf-8")
 
 read = json.load(readOpen)
 settings = json.load(settingsOpen)
+Rfu = [line]#,ki1,ki2,ki3,ki4,ki5,ki6,ki7,ki8,ki9,ki10]
+#Exc = [ki1,ki2,ki3,ki4,ki5,ki6,ki7,ki8,ki9,ki10]
+lineMID = line.getProfile().mid
+#ki1MID = ki1.getProfile().mid
+#ki2MID = ki2.getProfile().mid
+#ki3MID = ki3.getProfile().mid
+#ki4MID = ki4.getProfile().mid
+#ki5MID = ki5.getProfile().mid
+#ki6MID = ki6.getProfile().mid
+#ki7MID = ki7.getProfile().mid
+#ki8MID = ki8.getProfile().mid
+#ki9MID = ki9.getProfile().mid
+#ki10MID = ki10.getProfile().mid
+bot1 = line.getProfile().mid
+RfuBot=[lineMID]#,ki1MID,ki2MID,ki3MID,ki4MID,ki5MID,ki6MID,ki7MID,ki8MID,ki9MID,ki10MID]
+Family=["ue32b11986d8e9e5cf70b642cf7ba88ff",lineMID]#,ki1MID,ki2MID,ki3MID,ki4MID,ki5MID,ik6MID,ki7MID,ki8MID,ki9MID,ki10MID]
+admin=['ue32b11986d8e9e5cf70b642cf7ba88ff',lineMID]
+RfuFamily = RfuBot + Family
 
-#settings["myProfile"]["displayName"] = lineProfile.displayName 
-#settings["myProfile"]["statusMessage"] = lineProfile.statusMessage
-#settings["myProfile"]["pictureStatus"] = lineProfile.pictureStatus
-
+protectname = []
+protecturl = []
+protection = []
+autocancel = {}
+autoinvite = []
+autoleaveroom = []
+targets = []
+#==============================================================================#
 #==============================================================================#
 settings = {
     "autoAdd": False,
@@ -186,12 +306,12 @@ def backupData():
     except Exception as error:
         logError(error)
         return False
-
+#~~~~~~~~~~~~~~~~~~~~บ อ ท ท ด ล อ ง นุ & สุ ~~~~~~~~~~~~~~~~~#                                
 def helpmessage():
-    helpMessage = "╔══[☢ ŦΣÄM ƉØÑØVÄÑ ☢]" + "\n" + \
-                  "╠ Help" + "\n" + \
-                  "╠ Translate" + "\n" + \
-                  "╠ TextToSpeech" + "\n" + \
+    helpMessage = "╔══[ บ อ ท ท ด ล อ ง ]" + "\n" + \
+                  "╠ คำสั่ง1" + "\n" + \
+                  "╠ คำสั่ง2" + "\n" + \
+                  "╠ คำสั่ง3" + "\n" + \
                   "╠══[ Status Command ]" + "\n" + \
                   "╠ Restart" + "\n" + \
                   "╠ Runtime" + "\n" + \
@@ -250,11 +370,15 @@ def helpmessage():
                   "╠ SearchLyric「Search」" + "\n" + \
                   "╠ SearchImage「Search」" + "\n" + \
                   "╠ ScreenshootWebsite「LinkURL」" + "\n" + \
-                  "╚══[☢ ŦΣÄM ƉØÑØVÄÑ ☢]"
+                  "╚══[🍂 ติ ด ต่ อ ส อ บ ถ า ม 🍂]" + "\n" + \
+                  "╔═════════════════════┓" + "\n" + \
+                  "╠⌬https://line.me/ti/p/t39FP9K59s⌬ " + "\n" + \
+                  "╚═════════════════════┛" 
+                                     
     return helpMessage
     
 def helptexttospeech():
-    helpTextToSpeech =   "╔══[☢ ŦΣÄM ƉØÑØVÄÑ ☢]" + "\n" + \
+    helpTextToSpeech =   "╔══[ 🐾 ระบบคิกเกอร์ 🐾 ]" + "\n" + \
                          "╠ af : Afrikaans" + "\n" + \
                          "╠ sq : Albanian" + "\n" + \
                          "╠ ar : Arabic" + "\n" + \
@@ -422,7 +546,7 @@ def helptranslate():
                        "╠ he : Hebrew" + "\n" + \
                        "╚══[ Jangan Typo ]" + "\n" + "\n\n" + \
                          "Contoh : IDline 2000m."
-    return helpTranslate
+    return helpTranslate              
 #==============================================================================#
 def lineBot(op):
     try:
@@ -432,7 +556,7 @@ def lineBot(op):
         if op.type == 5:
             print ("[ 5 ] NOTIFIED ADD CONTACT")
             if settings["autoAdd"] == True:
-                line.sendMessage(op.param1, "แอดมาทำไม:D".format(str(line.getContact(op.param1).displayName)))
+                line.sendMessage(op.param1, "แอดมาทำไม หรอ จ๊ะ:D".format(str(line.getContact(op.param1).displayName)))
         if op.type == 13:
             print ("[ 13 ] NOTIFIED INVITE GROUP")
             group = line.getGroup(op.param1)
@@ -460,20 +584,20 @@ def lineBot(op):
                 if text is None:
                     return
 #==============================================================================#
-                if text.lower() == 'help':
+                if text.lower() == 'คำสั่ง1':
                     helpMessage = helpmessage()
                     line.sendMessage(to, str(helpMessage))
                     line.sendContact(to, "ue32b11986d8e9e5cf70b642cf7ba88ff")
-                elif text.lower() == 'texttospeech':
+                elif text.lower() == 'คำสั่ง2':
                     helpTextToSpeech = helptexttospeech()
                     line.sendMessage(to, str(helpTextToSpeech))
-                elif text.lower() == 'translate':
+                elif text.lower() == 'คำสั่ง3':
                     helpTranslate = helptranslate()
                     line.sendMessage(to, str(helpTranslate))
 #==============================================================================#
                 elif text.lower() == 'speed':
                     start = time.time()
-                    line.sendMessage(to, "☢ ŦΣÄM ƉØÑØVÄÑ ☢")
+                    line.sendMessage(to, "☞ ŦΣÄM ⚡ъਙЊъনਹਙ์⚡ BOT ☜")
                     elapsed_time = time.time() - start
                     line.sendMessage(to,format(str(elapsed_time)))
                 elif text.lower() == 'restart':
