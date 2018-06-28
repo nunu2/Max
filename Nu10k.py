@@ -1208,15 +1208,15 @@ def lineBot(op):
                     cctv['sidermem'][msg.to] = ""
                     cctv['cyduk'][msg.to]=True 
                     settings["Sider"] = True
-                    line.sendMessage(msg.to,"Cek Sider already on")
+                    line.sendMessage(msg.to,"เปิด อ่านคนแอบ แล้ว จ้า")
 
                 elif text.lower() == 'sider off':
                     if msg.to in cctv['point']:
                        cctv['cyduk'][msg.to]=False
                        settings["Sider"] = False
-                       line.sendMessage(msg.to,"Cek Sider already off")
+                       line.sendMessage(msg.to,"ปิด อ่านคนแอบ แล้ว จ้า")
                     else:
-                        line.sendMessage(msg.to,"Cek Sider already off")
+                        line.sendMessage(msg.to,"ปิด อ่านคนแอบ แล้ว จ้า")
 
 #======================================ระ บ บ คิ ก เ ก อ ร์========================================#                         
    #-------------------------------------------------------------------------------
