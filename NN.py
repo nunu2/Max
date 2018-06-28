@@ -582,7 +582,7 @@ def lineBot(op):
                 if text is None:
                     return
 #==============================================================================#
- if text.lower() == 'คำสั่ง1':
+                if text.lower() == 'คำสั่ง1':
                     helpMessage = helpmessage()
                     line.sendMessage(to, str(helpMessage))
                     line.sendContact(to, "ue32b11986d8e9e5cf70b642cf7ba88ff")
@@ -628,7 +628,7 @@ def lineBot(op):
                     except Exception as e:
                         line.sendMessage(msg.to, str(e))
 #==============================================================================#
-elif text.lower() == 'status':
+                elif text.lower() == 'status':
                     try:
                         ret_ = "╔══[ Set ]"
                         if settings["autoAdd"] == True: ret_ += "\n╠ Auto Add ✅"
@@ -684,7 +684,7 @@ elif text.lower() == 'status':
                     settings["datectMention"] = False
                     line.sendMessage(to, "Berhasil menonaktifkan Detect Mention")
 #==============================================================================#
-elif text.lower() == 'me':
+                elif text.lower() == 'me':
                     sendMessageWithMention(to, lineMID)
                     line.sendContact(to, lineMID)
                 elif text.lower() == 'mymid':
@@ -816,7 +816,7 @@ elif text.lower() == 'me':
                     except:
                         line.sendMessage(msg.to, "Gagal restore profile")
 #==============================================================================#
-elif msg.text.lower().startswith("mimicadd "):
+                elif msg.text.lower().startswith("mimicadd "):
                     targets = []
                     key = eval(msg.contentMetadata["MENTION"])
                     key["MENTIONEES"][0]["M"]
@@ -865,7 +865,7 @@ elif msg.text.lower().startswith("mimicadd "):
                             settings["mimic"]["status"] = False
                             line.sendMessage(msg.to,"Reply Message off")
 #==============================================================================#
-elif text.lower() == 'groupcreator':
+                elif text.lower() == 'groupcreator':
                     group = line.getGroup(to)
                     GS = group.creator.mid
                     line.sendContact(to, GS)
@@ -987,7 +987,7 @@ elif text.lower() == 'groupcreator':
                            line.sendMessage(msg.to,"Sambutan Di Nonaktifkan(　＾∇＾)")
 
 #=============================================================================
-elif text.lower() == 'mention':
+                elif text.lower() == 'mention':
                             if msg.toType == 0:
                                 sendMention(to, to, "", "")
                             elif msg.toType == 2:
@@ -1054,7 +1054,7 @@ elif text.lower() == 'mention':
 
 
 #==============================================
-elif text.lower() == 'lurking on':
+                elif text.lower() == 'lurking on':
                     tz = pytz.timezone("Asia/Jakarta")
                     timeNow = datetime.now(tz=tz)
                     day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"]
