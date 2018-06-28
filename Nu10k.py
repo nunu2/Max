@@ -1212,233 +1212,33 @@ def lineBot(op):
                         line.sendMessage(msg.to,"Cek Sider already off")
 
 #======================================ระ บ บ คิ ก เ ก อ ร์========================================#
-
+                elif text.lower() == '*เปิดป้องกัน':
+                        settings["protect"] = True
+                        settings["qrprotect"] = True
+                        settings["inviteprotect"] = True
+                        settings["cancelprotect"] = True
+                        settings["join link"] = True
+                        gye.sendMessage(msg.to,"Join link on")
+                        gye.sendMessage(msg.to,"Qrprotect on")
+                        gye.sendMessage(msg.to,"Protect on")
+                        gye.sendMessage(msg.to,"Inviteprotect on")
+                        gye.sendMessage(msg.to,"Cancelprotect on")
+                        gye.sendMessage(msg.to,"➲ All Protect Set To On")
+                        		            
+                elif text.lower() == '*ปิดป้องกัน':
+             #       if msg._from in Owner:
+                        settings["protect"] = False
+                        settings["qrprotect"] = False
+                        settings["inviteprotect"] = False
+                        settings["cancelprotect"] = False
+                        gye.sendMessage(msg.to,"Qrprotect Off")
+                        gye.sendMessage(msg.to,"Protect Off")
+                        gye.sendMessage(msg.to,"Inviteprotect Off")
+                        gye.sendMessage(msg.to,"Cancelprotect Off")
+                        gye.sendMessage(msg.to,"➲ All Protect Set To Modar")
+            #        else:
+             #           gye.sendMessage(msg.to,"Just for Owner")
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ระบบคิกเกอร์~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#===========================================
-        if op.type == 32:
-            if not op.param2 in Bots:
-                if wait["protectionOn"] == True: 
-                    try:
-                        klist=[ki1,ki2,ki3,ki4,ki5,ki6,ki7,ki8,ki9,ki10]
-                        kicker = random.choice(klist) 
-                        G = kicker.getGroup(op.param1)
-                        kicker.kickoutFromGroup(op.param1,[op.param2])
-                        kicker.inviteIntoGroup(op.param1, [op.param3])
-                    except Exception, e:
-                       print e
-        if op.type == 13:
-            if mid in op.param3:
-                G = cl.getGroup(op.param1)
-                if wait["autoJoin"] == True:
-                    if wait["autoCancel"]["on"] == True:
-                        if len(G.members) <= wait["autoCancel"]["members"]:
-                            cl.rejectGroupInvitation(op.param1)
-                        else:
-                            cl.acceptGroupInvitation(op.param1)
-                        cl.sendText(op.param1, "ระบบกันรันทำงาน.\n[by'Ҩఖণಖஇ↭ধัюӄՁ่গს]\nhttp://line.me/ti/p/~antmod.")
-                    else:
-                        cl.acceptGroupInvitation(op.param1)
-                        cl.sendText(op.param1, "ระบบกันรันทำงาน.\n[by'Ҩఖণಖஇ↭ধัюӄՁ่গს]\nhttp://line.me/ti/p/~antmod.")
-                elif wait["autoCancel"]["on"] == True:
-                    if len(G.members) <= wait["autoCancel"]["members"]:
-                        cl.rejectGroupInvitation(op.param1)
-            else:
-                Inviter = op.param3.replace("",',')
-                InviterX = Inviter.split(",")
-                matched_list = []
-                for tag in wait["blacklist"]:
-                    matched_list+=filter(lambda str: str == tag, InviterX)
-                if matched_list == []:
-                    pass
-                else:
-                    cl.cancelGroupInvitation(op.param1, matched_list)
-            if Amid1 in op.param3:
-                G = cl.getGroup(op.param1)
-                if wait["autoJoin"] == True:
-                    if wait["autoCancel"]["on"] == True:
-                        if len(G.members) <= wait["autoCancel"]["members"]:
-                            ki1.rejectGroupInvitation(op.param1)
-                        else:
-                            ki1.acceptGroupInvitation(op.param1)
-                    else:
-                        ki1.acceptGroupInvitation(op.param1)
-                elif wait["autoCancel"]["on"] == True:
-                    if len(G.members) <= wait["autoCancel"]["members"]:
-                        ki1.rejectGroupInvitation(op.param1)
-            else:
-                Inviter = op.param3.replace("",',')
-                InviterX = Inviter.split(",")
-                matched_list = []
-                for tag in wait["blacklist"]:
-                    matched_list+=filter(lambda str: str == tag, InviterX)
-                if matched_list == []:
-                    pass
-                else:
-                    ki1.cancelGroupInvitation(op.param1, matched_list)
-            if Amid2 in op.param3:
-                G = cl.getGroup(op.param1)
-                if wait["autoJoin"] == True:
-                    if wait["autoCancel"]["on"] == True:
-                        if len(G.members) <= wait["autoCancel"]["members"]:
-                            ki2.rejectGroupInvitation(op.param1)
-                        else:
-                            ki2.acceptGroupInvitation(op.param1)
-                    else:
-                        ki2.acceptGroupInvitation(op.param1)
-                elif wait["autoCancel"]["on"] == True:
-                    if len(G.members) <= wait["autoCancel"]["members"]:
-                        ki2.rejectGroupInvitation(op.param1)
-            else:
-                Inviter = op.param3.replace("",',')
-                InviterX = Inviter.split(",")
-                matched_list = []
-                for tag in wait["blacklist"]:
-                    matched_list+=filter(lambda str: str == tag, InviterX)
-                if matched_list == []:
-                    pass
-                else:
-                    ki2.cancelGroupInvitation(op.param1, matched_list)
-        if op.type == 11:
-            if not op.param2 in Bots:
-              if wait["qr"] == True:  
-                try:
-                    klist=[ki1,ki2,ki3,ki4,ki5,ki6,ki7,ki8,ki9,ki10]
-                    kicker = random.choice(klist) 
-                    G = kicker.getGroup(op.param1)
-                    G.preventJoinByTicket = True
-                    kicker.updateGroup(G)
-                except Exception, e:
-                    print e
-        if op.type == 11:
-            if not op.param2 in Bots:
-              if wait["protectionOn"] == True:
-                 try:                    
-                    klist=[ki1,ki2,ki3,ki4,ki5,ki6,ki7,ki8,ki9,ki10]
-                    kicker = random.choice(klist) 
-                    G = kicker.getGroup(op.param1)
-                    G.preventJoinByTicket = True
-                    kicker.updateGroup(G)
-                    kicker.kickoutFromGroup(op.param1,[op.param2])
-                    G.preventJoinByTicket = True
-                    kicker.updateGroup(G)
-                 except Exception, e:
-                           print e
-        if op.type == 13:
-            G = cl.getGroup(op.param1)
-            I = G.creator
-            if not op.param2 in Bots:
-                if wait["protectionOn"] == True:  
-                    klist=[ki1,ki2,ki3,ki4,ki5,ki6,ki7,ki8,ki9,ki10]
-                    kicker = random.choice(klist)
-                    G = kicker.getGroup(op.param1)
-                    if G is not None:
-                        gInviMids = [contact.mid for contact in G.invitee]
-                        kicker.cancelGroupInvitation(op.param1, gInviMids)
-        if op.type == 19:
-                if not op.param2 in Bots:
-                    try:
-                        gs = ki1.getGroup(op.param1)
-                        gs = ki2.getGroup(op.param1)
-                        targets = [op.param2]
-                        for target in targets:
-                           try:
-                                wait["blacklist"][target] = True
-                                f=codecs.open('st2__b.json','w','utf-8')
-                                json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
-                           except:
-                            pass
-                                
-                    except Exception, e:
-                        print e
-                if not op.param2 in Bots:
-                  if wait["Backup"] == True:
-                    try:
-                        random.choice(KAC).inviteIntoGroup(op.param1, [op.param3])
-                    except Exception, e:
-                        print e
-                if not op.param2 in Bots:
-                  if wait["protectionOn"] == True:  
-                   try:
-                       klist=[ki1,ki2,ki3,ki4,ki5,ki6,ki7,ki8,ki9,ki10]
-                       kicker = random.choice(klist)
-                       G = kicker.getGroup(op.param1)
-                       G.preventJoinByTicket = False
-                       kicker.updateGroup(G)
-                       invsend = 0
-                       Ticket = kicker.reissueGroupTicket(op.param1)
-                       kl1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                       time.sleep(0.1)
-                       X = kicker.getGroup(op.param1)             
-                       X.preventJoinByTicket = True
-                       kl1.kickoutFromGroup(op.param1,[op.param2])
-                       kicker.kickoutFromGroup(op.param1,[op.param2])
-                       kl1.leaveGroup(op.param1)
-                       kicker.updateGroup(X)
-                   except Exception, e:
-                            print e
-                if not op.param2 in Bots:
-                    try:
-                        gs = ki1.getGroup(op.param1)
-                        gs = ki2.getGroup(op.param1)
-                        targets = [op.param2]
-                        for target in targets:
-                           try:
-                                wait["blacklist"][target] = True
-                                f=codecs.open('st2__b.json','w','utf-8')
-                                json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
-                           except:
-                            pass
-                                
-                    except Exception, e:
-                        print e
-                if not op.param2 in Bots:
-                  if wait["Backup"] == True:
-                    try:
-                        random.choice(KAC).inviteIntoGroup(op.param1, [op.param3])
-                    except Exception, e:
-                        print e
-        if op.type == 19:              
-                if mid in op.param3:
-                    if op.param2 in Bots:
-                        pass                   
-                    try:
-                        ki1.kickoutFromGroup(op.param1,[op.param2])
-                    except:
-                        try:
-                            random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
-                        except:
-                            print ("client Kick regulation or Because it does not exist in the group、\n["+op.param1+"]\nの\n["+op.param2+"]\nを蹴る事ができませんでした。\nブラックリストに追加します。")
-                        if op.param2 in wait["blacklist"]:
-                            pass
-                        if op.param2 in wait["whitelist"]:
-                            pass
-                        else:
-                            wait["blacklist"][op.param2] = True
-                    G = ki1.getGroup(op.param1)
-                    G.preventJoinByTicket = False
-                    ki1.updateGroup(G)
-                    Ti = ki1.reissueGroupTicket(op.param1)
-                    cl.acceptGroupInvitationByTicket(op.param1,Ti)
-                    time.sleep(0.01)
-                    ki1.acceptGroupInvitationByTicket(op.param1,Ti)
-                    time.sleep(0.01)
-                    ki1.acceptGroupInvitationByTicket(op.param1,Ti)
-                    time.sleep(0.01)
-                    ki2.acceptGroupInvitationByTicket(op.param1,Ti)
-                    time.sleep(0.01)
-                    ki3.acceptGroupInvitationByTicket(op.param1,Ti)
-                    time.sleep(0.01)
-                    ki4.acceptGroupInvitationByTicket(op.param1,Ti)
-                    time.sleep(0.01)
-                    ki5.acceptGroupInvitationByTicket(op.param1,Ti)
-                    time.sleep(0.01)
-                    ki6.acceptGroupInvitationByTicket(op.param1,Ti)
-                    time.sleep(0.01)
-                    ki7.acceptGroupInvitationByTicket(op.param1,Ti)
-                    ki8.acceptGroupInvitationByTicket(op.param1,Ti)
-                    ki9.acceptGroupInvitationByTicket(op.param1,Ti)
-                    ki10.acceptGroupInvitationByTicket(op.param1,Ti)
-
                                                                              
 #==============================================================================#   
                 elif "spamtag @" in msg.text.lower():
