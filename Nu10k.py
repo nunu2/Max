@@ -66,27 +66,33 @@ line = LINE("EuDWR6ISwEdQVQ0xFHrf.4YSrMg2oNLZ3c2qS97Qi+W.2QNhSG1eXq+6tKvGU9AyMiQ
 #channelToken = line.getChannelResult()
 #line.log("Channel Token : " + str(channelToken))
 
+ki1 = LINE("EuJMO4zMJuVIB9Q7r6Kd.ZumT2/Y29n7tOJ4IwPo4tq.7iNJvgf7kfqhYzxqffWaZ9Xy/sPVnTXDvSOAi5zoGVc=")
+ki2 = LINE("EufjpqADebzNQpbd6dEd.SPS+quoffhJbcv30K1vAdq.fILrF4NH6a+DGt2vwdX3nezm2rx6mbU+IjBd++1RgHQ=")
+ki3 = LINE("EuYHclxrzqW0XDSCiiw0.ZaBHUQRqncLKKv+uKgw/qa.VKgQeUjmWt79dLrKaLwJVzz8PCvzVj+FKBKI8Oezs/s=")
+ki4 = LINE("EuiBvYshQqZHJSzRAV3e.lVN3XpWByvHZ/lHSAQFaBG.b7z7iEocCtaW7H4Z8H4m/zTdzUxwBKKDMnliuhm91v8=")
+
+
 print ("Login Succes")
 
 lineMID = line.profile.mid
 lineProfile = line.getProfile()
 lineSettings = line.getSettings()
 
-#ki1MID = ki1.profile.mid
-#ki1Profile = ki1.getProfile()
-#ki1Settings = ki1.getSettings()
+ki1MID = ki1.profile.mid
+ki1Profile = ki1.getProfile()
+ki1Settings = ki1.getSettings()
 
-#ki2MID = ki2.profile.mid
-#ki2Profile = ki2.getProfile()
-#ki2Settings = ki2.getSettings()
+ki2MID = ki2.profile.mid
+ki2Profile = ki2.getProfile()
+ki2Settings = ki2.getSettings()
 
-#ki3MID = ki3.profile.mid
-#ki3Profile = ki3.getProfile()
-#ki3Settings = ki3.getSettings()
+ki3MID = ki3.profile.mid
+ki3Profile = ki3.getProfile()
+ki3Settings = ki3.getSettings()
 
-#ki4MID = ki4.profile.mid
-#ki4Profile = ki4.getProfile()
-#ki4Settings = ki4.getSettings()
+ki4MID = ki4.profile.mid
+ki4Profile = ki4.getProfile()
+ki4Settings = ki4.getSettings()
 
 #ki5MID = ki5.profile.mid
 #ki5Profile = ki5.getProfile()
@@ -119,10 +125,10 @@ lineSettings = line.getSettings()
 #oepoll = OEPoll(ki7)
 #oepoll = OEPoll(ki6)
 #oepoll = OEPoll(ki5)
-#oepoll = OEPoll(ki4)
-#oepoll = OEPoll(ki3)
-#oepoll = OEPoll(ki2)
-#oepoll = OEPoll(ki1)
+oepoll = OEPoll(ki4)
+oepoll = OEPoll(ki3)
+oepoll = OEPoll(ki2)
+oepoll = OEPoll(ki1)
 oepoll = OEPoll(line)
 #call = Call(line)
 readOpen = codecs.open("read.json","r","utf-8")
@@ -130,13 +136,13 @@ settingsOpen = codecs.open("temp.json","r","utf-8")
 
 read = json.load(readOpen)
 settings = json.load(settingsOpen)
-Rfu = [line]#,ki1,ki2,ki3,ki4,ki5,ki6,ki7,ki8,ki9,ki10]
-#Exc = [ki1,ki2,ki3,ki4,ki5,ki6,ki7,ki8,ki9,ki10]
+Rfu = [line,ki1,ki2,ki3,ki4]#,ki5,ki6,ki7,ki8,ki9,ki10]
+Exc = [ki1,ki2,ki3,ki4]#,ki5,ki6,ki7,ki8,ki9,ki10]
 lineMID = line.getProfile().mid
-#ki1MID = ki1.getProfile().mid
-#ki2MID = ki2.getProfile().mid
-#ki3MID = ki3.getProfile().mid
-#ki4MID = ki4.getProfile().mid
+ki1MID = ki1.getProfile().mid
+ki2MID = ki2.getProfile().mid
+ki3MID = ki3.getProfile().mid
+ki4MID = ki4.getProfile().mid
 #ki5MID = ki5.getProfile().mid
 #ki6MID = ki6.getProfile().mid
 #ki7MID = ki7.getProfile().mid
@@ -144,7 +150,7 @@ lineMID = line.getProfile().mid
 #ki9MID = ki9.getProfile().mid
 #ki10MID = ki10.getProfile().mid
 bot1 = line.getProfile().mid
-RfuBot=[lineMID]#,ki1MID,ki2MID,ki3MID,ki4MID,ki5MID,ki6MID,ki7MID,ki8MID,ki9MID,ki10MID]
+RfuBot=[lineMID,ki1MID,ki2MID,ki3MID,ki4MID]#,ki5MID,ki6MID,ki7MID,ki8MID,ki9MID,ki10MID]
 Family=["ue32b11986d8e9e5cf70b642cf7ba88ff",lineMID]#,ki1MID,ki2MID,ki3MID,ki4MID,ki5MID,ik6MID,ki7MID,ki8MID,ki9MID,ki10MID]
 admin=['ue32b11986d8e9e5cf70b642cf7ba88ff',lineMID]
 RfuFamily = RfuBot + Family
@@ -1310,7 +1316,7 @@ def lineBot(op):
                             else:
                                 line.sendMessage(msg.to,"➲ Protection Cancel Invite Already Off")
 #-------------------------------------------------------------------------------
------------------------------------------------------------
+#-----------------------------------------------------------
                 elif text.lower() == '*เปิดป้องกัน':
                         settings["protect"] = True
                         settings["qrprotect"] = True
