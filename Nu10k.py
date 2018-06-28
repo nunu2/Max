@@ -584,6 +584,339 @@ def lineBot(op):
                 if text is None:
                     return
 #==============================================================================#
+def sendMessage(to, text, contentMetadata={}, contentType=0):
+    mes = Message()
+    mes.to, mes.from_ = to, profile.mid
+    mes.text = text
+    mes.contentType, mes.contentMetadata = contentType, contentMetadata
+    if to not in messageReq:
+        messageReq[to] = -1
+    messageReq[to] += 1
+
+def NOTIFIED_READ_MESSAGE(op):
+    try:
+        if op.param1 in wait2['readPoint']:
+            Name = line.getContact(op.param2).displayName
+            if Name in wait2['readMember'][op.param1]:
+                pass
+            else:
+                wait2['readMember'][op.param1] += "\n・" + Name
+                wait2['ROM'][op.param1][op.param2] = "・" + Name
+        else:
+            pass
+    except:
+        pass
+
+def bot(op):
+    try:
+        if op.type == 0:
+            return
+        if op.type == 5:
+            if wait["autoAdd"] == True:
+                line.findAndAddContactsByMid(op.param1)
+                if (wait["message"] in [""," ","\n",None]):
+                    pass
+                else:
+                    line.sendText(op.param1,str(wait["message"]))
+
+
+        if op.type == 11:
+            if op.param3 == '1':
+                if op.param1 in wait['pname']:
+                    try:
+                        G = line.getGroup(op.param1)
+                    except:
+                        try:
+                            G = ki1.getGroup(op.param1)
+                        except:
+                            try:
+                                G = ki2.getGroup(op.param1)
+                            except:
+                                try:
+                                    G = ki3.getGroup(op.param1)
+                                except:
+                                    try:
+                                        G = ki4.getGroup(op.param1)
+				    except:
+					try:
+                                            G = ki5.getGroup(op.param1)
+                                        except:
+                                            pass
+                    G.name = wait['pro_name'][op.param1]
+                    try:
+                        line.updateGroup(G)
+                    except:
+                        try:
+                            ki1.updateGroup(G)
+                        except:
+                            try:
+                                ki2.updateGroup(G)
+                            except:
+                                try:
+                                    ki2.updateGroup(G)
+                                except:
+                                    try:
+                                        ki3.updateGroup(G)
+                                    except:
+                                        try:
+                                            ki4.updateGroup(G)
+                                        except:
+                                            pass
+                    if op.param2 in ken:
+                        pass
+                    else:
+                        try:
+                            ki1.kickoutFromGroup(op.param1,[op.param2])
+                        except:
+                            try:
+                                ki1.kickoutFromGroup(op.param1,[op.param2])
+                            except:
+                                try:
+                                    ki2.kickoutFromGroup(op.param1,[op.param2])
+                                except:
+                                    try:
+                                        ki3.kickoutFromGroup(op.param1,[op.param2])
+                                    except:
+                                        try:
+                                            ki4.kickoutFromGroup(op.param1,[op.param2])
+                                        except:
+                                            pass
+                                        line.sendText(op.param1,"Group Name Lock")
+                                        ki1.sendText(op.param1,"Haddeuh dikunci Pe'a")
+                                        ki2.sendText(op.param1,"Wekawekaweka (Har Har)")
+                                        c = Message(to=op.param1, from_=None, text=None, contentType=13)
+                                        c.contentMetadata={'mid':op.param2}
+                                        line.sendMessage(c)
+
+        if op.type == 13:
+                if op.param3 in mid:
+                    if op.param2 in mid:
+                        G = line.getGroup(op.param1)
+                        G.preventJoinByTicket = False
+                        line.updateGroup(G)
+                        Ticket = line.reissueGroupTicket(op.param1)
+                        line.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        G.preventJoinByTicket = True
+                        line.updateGroup(G)
+                        Ticket = line.reissueGroupTicket(op.param1)
+
+
+                if op.param3 in mid:
+                    if op.param2 in Amid1:
+                        G = ki1.getGroup(op.param1)
+                        G.preventJoinByTicket = False
+                        ki1.updateGroup(X)
+                        Ti = ki1.reissueGroupTicket(op.param1)
+                        line.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        G.preventJoinByTicket = True
+                        ki1.updateGroup(X)
+                        Ti = ki1.reissueGroupTicket(op.param1)
+
+                if op.param3 in mid:
+                    if op.param2 in Amid2:
+                        X = ki2.getGroup(op.param1)
+                        X.preventJoinByTicket = False
+                        ki2.updateGroup(X)
+                        Ti = ki2.reissueGroupTicket(op.param1)
+                        line.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        X.preventJoinByTicket = True
+                        ki2.updateGroup(X)
+                        Ti = ki2.reissueGroupTicket(op.param1)
+
+                if op.param3 in mid:
+                    if op.param2 in Amid3:
+                        X = ki3.getGroup(op.param1)
+                        X.preventJoinByTicket = False
+                        ki3.updateGroup(X)
+                        Ti = ki3.reissueGroupTicket(op.param1)
+                        line.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        X.preventJoinByTicket = True
+                        ki3.updateGroup(X)
+                        Ti = ki3.reissueGroupTicket(op.param1)
+
+                if op.param3 in mid:
+                    if op.param2 in Amid4:
+                        G = ki4.getGroup(op.param1)
+                        G.preventJoinByTicket = False
+                        ki4.updateGroup(X)
+                        Ti = ki4.reissueGroupTicket(op.param1)
+                        line.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        G.preventJoinByTicket = True
+                        ki4.updateGroup(X)
+                        Ti = ki4.reissueGroupTicket(op.param1)
+
+                if op.param3 in mid:
+                    if op.param2 in Amid5:
+                        G = ki5.getGroup(op.param1)
+                        G.preventJoinByTicket = False
+                        ki5.updateGroup(X)
+                        Ti = ki5.reissueGroupTicket(op.param1)
+                        line.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        G.preventJoinByTicket = True
+                        ki5.updateGroup(X)
+                        Ti = ki5.reissueGroupTicket(op.param1)
+
+                if op.param3 in mid:
+                    if op.param2 in Amid6:
+                        G = ki6.getGroup(op.param1)
+                        G.preventJoinByTicket = False
+                        ki6.updateGroup(X)
+                        Ti = ki6.reissueGroupTicket(op.param1)
+                        line.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        G.preventJoinByTicket = True
+                        ki6.updateGroup(X)
+                        Ti = ki6.reissueGroupTicket(op.param1)
+                if op.param3 in mid:
+                    if op.param2 in Amid7:
+                        G = ki7.getGroup(op.param1)
+                        G.preventJoinByTicket = False
+                        ki7.updateGroup(X)
+                        Ti = ki7.reissueGroupTicket(op.param1)
+                        line.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        G.preventJoinByTicket = True
+                        ki7.updateGroup(X)
+                        Ti = ki7.reissueGroupTicket(op.param1)
+                if op.param3 in mid:
+                    if op.param2 in Amid8:
+                        G = ki8.getGroup(op.param1)
+                        G.preventJoinByTicket = False
+                        ki8.updateGroup(X)
+                        Ti = ki8.reissueGroupTicket(op.param1)
+                        line.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        G.preventJoinByTicket = True
+                        ki8.updateGroup(X)
+                        Ti = ki8.reissueGroupTicket(op.param1)
+                if op.param3 in mid:
+                    if op.param2 in Amid9:
+                        G = ki9.getGroup(op.param1)
+                        G.preventJoinByTicket = False
+                        ki9.updateGroup(X)
+                        Ti = ki9.reissueGroupTicket(op.param1)
+                        line.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        G.preventJoinByTicket = True
+                        ki9.updateGroup(X)
+                        Ti = ki9.reissueGroupTicket(op.param1)
+                if op.param3 in mid:
+                    if op.param2 in Amid10:
+                        G = ki10.getGroup(op.param1)
+                        G.preventJoinByTicket = False
+                        ki10.updateGroup(X)
+                        Ti = ki10.reissueGroupTicket(op.param1)
+                        line.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        G.preventJoinByTicket = True
+                        ki10.updateGroup(X)
+                        Ti = ki10.reissueGroupTicket(op.param1)
+
+
+
+                if op.param3 in Amid1:
+                    if op.param2 in Amid2:
+                        X = ki2.getGroup(op.param1)
+                        X.preventJoinByTicket = False
+                        ki2.updateGroup(X)
+                        Ti = ki1.reissueGroupTicket(op.param1)
+                        ki1.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        X.preventJoinByTicket = True
+                        ki2.updateGroup(X)
+                        Ti = ki2.reissueGroupTicket(op.param1)
+
+                if op.param3 in Amid2:
+                    if op.param2 in Amid3:
+                        X = ki3.getGroup(op.param1)
+                        X.preventJoinByTicket = False
+                        ki3.updateGroup(X)
+                        Ti = ki2.reissueGroupTicket(op.param1)
+                        ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        X.preventJoinByTicket = True
+                        ki3.updateGroup(X)
+                        Ti = ki3.reissueGroupTicket(op.param1)
+
+                if op.param3 in Amid3:
+                    if op.param2 in Amid4:
+                        X = ki4.getGroup(op.param1)
+                        X.preventJoinByTicket = False
+                        ki4.updateGroup(X)
+                        Ti = ki4.reissueGroupTicket(op.param1)
+                        ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        X.preventJoinByTicket = True
+                        ki4.updateGroup(X)
+                        Ti = ki4.reissueGroupTicket(op.param1)
+
+                if op.param3 in Amid4:
+                    if op.param2 in Amid5:
+                        X = ki5.getGroup(op.param1)
+                        X.preventJoinByTicket = False
+                        ki5.updateGroup(X)
+                        Ti = ki5.reissueGroupTicket(op.param1)
+                        ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        X.preventJoinByTicket = True
+                        ki5.updateGroup(X)
+                        Ti = ki5.reissueGroupTicket(op.param1)
+
+                if op.param3 in Amid5:
+                    if op.param2 in Amid6:
+                        X = ki6.getGroup(op.param1)
+                        X.preventJoinByTicket = False
+                        ki6.updateGroup(X)
+                        Ti = ki6.reissueGroupTicket(op.param1)
+                        ki5.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        X.preventJoinByTicket = True
+                        ki6.updateGroup(X)
+                        Ti = ki6.reissueGroupTicket(op.param1)
+
+                if op.param3 in Amid6:
+                    if op.param2 in Amid7:
+                        X = ki7.getGroup(op.param1)
+                        X.preventJoinByTicket = False
+                        ki7.updateGroup(X)
+                        Ti = ki7.reissueGroupTicket(op.param1)
+                        ki6.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        X.preventJoinByTicket = True
+                        ki.updateGroup(X)
+                        Ti = ki7.reissueGroupTicket(op.param1)
+
+                if op.param3 in Amid7:
+                    if op.param2 in Amid8:
+                        X = ki8.getGroup(op.param1)
+                        X.preventJoinByTicket = False
+                        ki8.updateGroup(X)
+                        Ti = ki8.reissueGroupTicket(op.param1)
+                        ki7.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        X.preventJoinByTicket = True
+                        ki8.updateGroup(X)
+                        Ti = ki8.reissueGroupTicket(op.param1)
+                if op.param3 in Amid8:
+                    if op.param2 in Amid9:
+                        X = ki9.getGroup(op.param1)
+                        X.preventJoinByTicket = False
+                        ki9.updateGroup(X)
+                        Ti = ki9.reissueGroupTicket(op.param1)
+                        ki8.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        X.preventJoinByTicket = True
+                        ki9.updateGroup(X)
+                        Ti = ki9.reissueGroupTicket(op.param1)
+                if op.param3 in Amid9:
+                    if op.param2 in Amid10:
+                        X = ki10.getGroup(op.param1)
+                        X.preventJoinByTicket = False
+                        ki7.updateGroup(X)
+                        Ti = ki10.reissueGroupTicket(op.param1)
+                        ki9.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        X.preventJoinByTicket = True
+                        ki10.updateGroup(X)
+                        Ti = ki10.reissueGroupTicket(op.param1)
+                if op.param3 in Amid10:
+                    if op.param2 in Amid1:
+                        X = ki.getGroup(op.param1)
+                        X.preventJoinByTicket = False
+                        ki.updateGroup(X)
+                        Ti = ki.reissueGroupTicket(op.param1)
+                        ki10.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        X.preventJoinByTicket = True
+                        ki.updateGroup(X)
+                        Ti = ki.reissueGroupTicket(op.param1)
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~☆☆☆~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                 if text.lower() == 'คำสั่ง1':
                     helpMessage = helpmessage()
                     line.sendMessage(to, str(helpMessage))
@@ -1211,167 +1544,8 @@ def lineBot(op):
                     else:
                         line.sendMessage(msg.to,"Cek Sider already off")
 
-#======================================ระ บ บ คิ ก เ ก อ ร์========================================#
-#-------------------------------------------------------------------------------
-                elif text.lower() == 'protect on':
-                        if settings["protect"] == True:
-                            if settings["lang"] == "JP":
-                                line.sendMessage(msg.to,"➲ Protection Already On")
-                        else:
-                            settings["protect"] = True
-                            if settings["lang"] == "JP":
-                                line.sendMessage(msg.to,"➲ Protection Set To On")
-                                
-                elif text.lower() == 'protect off':
-                        if settings["protect"] == False:
-                            if settings["lang"] == "JP":
-                                line.sendMessage(msg.to,"➲ Protection Already Off")
-                        else:
-                            settings["protect"] = False
-                            if settings["lang"] == "JP":
-                                line.sendMessage(msg.to,"➲ Protection Set To Off")
-#----------------------------------------------------------------------------------------                        
-                elif text.lower() == 'qrprotect on':
-                        if settings["qrprotect"] == True:
-                            if settings["lang"] == "JP":
-                                line.sendMessage(msg.to,"➲ Protection Qr Already On")
-                            else:
-                                line.sendMessage(msg.to,"➲ Protection Qr Set To On")
-                        else:
-                            settings["qrprotect"] = True
-                            if settings["lang"] == "JP":
-                                line.sendMessage(msg.to,"➲ Protection Qr Set To On")
-                            else:
-                                line.sendMessage(msg.to,"➲ Protection Qr Already On")
-                                
-                elif text.lower() == 'qrprotect off':
-                        if settings["qrprotect"] == False:
-                            if settings["lang"] == "JP":
-                                line.sendMessage(msg.to,"➲ Protection Qr Already Off")
-                            else:
-                                line.sendMessage(msg.to,"➲ Protection Qr Set To Off")
-                        else:
-                            settings["qrprotect"] = False
-                            if settings["lang"] == "JP":
-                                line.sendMessage(msg.to,"➲ Protection Qr Set To Off")
-                            else:
-                                line.sendMessage(msg.to,"➲ Protection Qr Already Off")
-#-------------------------------------------------------------------------------
-                elif text.lower() == 'inviteprotect on':
-                        if settings["inviteprotect"] == True:
-                            if settings["lang"] == "JP":
-                                line.sendMessage(msg.to,"➲ Protection Invite Already On")
-                            else:
-                                line.sendMessage(msg.to,"➲ Protection Invite Set To On")
-                        else:
-                            settings["inviteprotect"] = True
-                            if settings["lang"] == "JP":
-                                line.sendMessage(msg.to,"➲ Protection Invite Set To On")
-                            else:
-                                line.sendMessage(msg.to,"➲ Protection Invite Already On")
-                                
-                elif text.lower() == 'inviteprotect off':
-                        if settings["inviteprotect"] == False:
-                            if settings["lang"] == "JP":
-                                line.sendMessage(msg.to,"➲ Protection Invite Already Off")
-                            else:
-                                line.sendMessage(msg.to,"➲ Protection Invite Set To Off")
-                        else:
-                            settings["inviteprotect"] = False
-                            if settings["lang"] == "JP":
-                                line.sendMessage(msg.to,"➲ Protection Invite Set To Off")
-                            else:
-                                line.sendMessage(msg.to,"➲ Protection Invite Already Off")
-#-------------------------------------------------------------------------------
-                elif text.lower() == 'cancelprotect on':
-                        if settings["cancelprotect"] == True:
-                            if settings["lang"] == "JP":
-                                line.sendMessage(msg.to,"➲ Protection Cancel Invite Already On")
-                            else:
-                                line.sendMessage(msg.to,"➲ Protection Cancel Invite Set To On")
-                        else:
-                            settings["cancelprotect"] = True
-                            if settings["lang"] == "JP":
-                                line.sendMessage(msg.to,"➲ Protection Cancel Invite Set To On")
-                            else:
-                                line.sendMessage(msg.to,"➲ Protection Cancel Invite Already On")
-                                
-                elif text.lower() == 'cancelprotect off':
-                        if settings["cancelprotect"] == False:
-                            if settings["lang"] == "JP":
-                                line.sendMessage(msg.to,"➲ Protection Cancel Invite Already Off")
-                            else:
-                                line.sendMessage(msg.to,"➲ Protection Cancel Invite Set To Off")
-                        else:
-                            settings["cancelprotect"] = False
-                            if settings["lang"] == "JP":
-                                line.sendMessage(msg.to,"➲ Protection Cancel Invite Set To Off")
-                            else:
-                                line.sendMessage(msg.to,"➲ Protection Cancel Invite Already Off")
-#-------------------------------------------------------------------------------
-                elif text.lower() == '*เปิดป้องกัน':
-                        settings["protect"] = True
-                        settings["qrprotect"] = True
-                        settings["inviteprotect"] = True
-                        settings["cancelprotect"] = True
-                        settings["join link"] = True
-                        line.sendMessage(msg.to,"Join link on")
-                        line.sendMessage(msg.to,"Qrprotect on")
-                        line.sendMessage(msg.to,"Protect on")
-                        line.sendMessage(msg.to,"Inviteprotect on")
-                        line.sendMessage(msg.to,"Cancelprotect on")
-                        line.sendMessage(msg.to,"➲ All Protect Set To On")
-                        		            
-                elif text.lower() == '*ปิดป้องกัน':
-             #       if msg._from in Owner:
-                        settings["protect"] = False
-                        settings["qrprotect"] = False
-                        settings["inviteprotect"] = False
-                        settings["cancelprotect"] = False
-                        line.sendMessage(msg.to,"Qrprotect Off")
-                        line.sendMessage(msg.to,"Protect Off")
-                        line.sendMessage(msg.to,"Inviteprotect Off")
-                        line.sendMessage(msg.to,"Cancelprotect Off")
-                        line.sendMessage(msg.to,"➲ All Protect Set To Modar")
-            #        else:
-             #           gye.sendMessage(msg.to,"Just for Owner")
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ระบบคิกเกอร์~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#==============================================================================#
-                elif msg.text.lower() == 'สาวๆรายงานตัว':
-                        line.sendContact(to, gyeMID)
-                        ki1.sendContact(to, aisMID)
-                        ki2.sendContact(to, ki2MID)
-                        ki3.sendContact(to, ki3MID)
-                        ki4.sendContact(to, ki4MID)
-                elif text.lower() in ["หนีหำ"]:    
-                    #gye.leaveGroup(msg.to)
-                    ki1.leaveGroup(msg.to)
-                    ki2.leaveGroup(msg.to)
-                    ki3.leaveGroup(msg.to)
-                    ki4.leaveGroup(msg.to)
-                elif text.lower() in ["ออกทั้งหมด"]:    
-                    line.leaveGroup(msg.to)
-                    ki1.leaveGroup(msg.to)
-                    ki2.leaveGroup(msg.to)
-                    ki3.leaveGroup(msg.to)
-                    ki4.leaveGroup(msg.to)      
-                elif text.lower() in ["มาหำ"]:    
-                    G = line.getGroup(msg.to)
-                    ginfo = line.getGroup(msg.to)
-                    G.preventedJoinByTicket = False
-                    line.updateGroup(G)
-                    invsend = 0
-                    Ticket = line.reissueGroupTicket(msg.to)
-                    ki1.acceptGroupInvitationByTicket(msg.to,Ticket)
-                    ki2.acceptGroupInvitationByTicket(msg.to,Ticket)
-                    ki3.acceptGroupInvitationByTicket(msg.to,Ticket)		
-                    ki4.acceptGroupInvitationByTicket(msg.to,Ticket)		
-                    G = line.getGroup(msg.to)
-                    G.preventedJoinByTicket = True
-                    line.updateGroup(G)
-                    G.preventedJoinByTicket(G)
-                    line.updateGroup(G)
-                                                                                
+#======================================ระ บ บ คิ ก เ ก อ ร์========================================#                         
+                                                          
 #==============================================================================#   
                 elif "spamtag @" in msg.text.lower():
                    _name = msg.text.replace("spamtag @","")
