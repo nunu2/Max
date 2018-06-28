@@ -594,4 +594,37 @@ def lineBot(op):
                     helpTranslate = helptranslate()
                     line.sendMessage(to, str(helpTranslate))
 #==============================================================================#
-
+                elif text.lower() == 'speed': 
+                    start = time.time()
+                    line.sendMessage(to, "☢ ŦΣÄM ƉØÑØVÄÑ ☢")
+                    elapsed_time = time.time() - start
+                    line.sendMessage(to,format(str(elapsed_time)))
+                elif text.lower() == 'restart':
+                    line.sendMessage(to, "Please....")
+                    restartBot()
+                elif text.lower() == 'runtime':
+                    timeNow = time.time()
+                    runtime = timeNow - botStart
+                    runtime = format_timespan(runtime)
+                    line.sendMessage(to, "тнє вσт нαѕ вєєи яυииιиg {}".format(str(runtime)))
+                elif text.lower() == 'about':
+                    try:
+                        arr = []
+                        owner = "ue32b11986d8e9e5cf70b642cf7ba88ff"
+                        creator = line.getContact(owner)
+                        contact = line.getContact(lineMID)
+                        grouplist = line.getGroupIdsJoined()
+                        contactlist = line.getAllContactIds()
+                        blockedlist = line.getBlockedContactIds()
+                        ret_ = "╔══[ About Self ]"
+                        ret_ += "\n╠ Line : {}".format(contact.displayName)
+                        ret_ += "\n╠ Group : {}".format(str(len(grouplist)))
+                        ret_ += "\n╠ Friend : {}".format(str(len(contactlist)))
+                        ret_ += "\n╠ Blocked : {}".format(str(len(blockedlist)))
+                        ret_ += "\n╠══[ About Selfbot ]"
+                        ret_ += "\n╠ Version : Beta Test"
+                        ret_ += "\n╠ Creator : {}".format(creator.displayName)
+                        ret_ += "\n╚══[ Ｈｅｌｌｏ Ｗｏｒｌｄ ]"
+                        line.sendMessage(to, str(ret_))
+                    except Exception as e:
+                        line.sendMessage(msg.to, str(e))
