@@ -1343,43 +1343,25 @@ def lineBot(op):
                         line.sendMessage(msg.to,"➲ All Protect Set To Modar")
             #        else:
              #           gye.sendMessage(msg.to,"Just for Owner")
-#==============================================================================#  
-               elif msg.text.lower() == 'รายงานตัว':
-                        line.sendContact(to, lineMID)
-                        ki1.sendContact(to, ki1MID)
+#==============================================================================#                
+                elif msg.text.lower() == 'รายงานตัว':
+                        line.sendContact(to, gyeMID)
+                        ki1.sendContact(to, aisMID)
                         ki2.sendContact(to, ki2MID)
                         ki3.sendContact(to, ki3MID)
                         ki4.sendContact(to, ki4MID)
-                        ki5.sendContact(to, ki5MID)
-                        ki6.sendContact(to, ki6MID)
-                        ki7.sendContact(to, ki7MID)
-                        ki8.sendContact(to, ki8MID)
-                        ki9.sendContact(to, ki9MID)
-                        ki10.sendContact(to, ki10MID)
                 elif text.lower() in ["หนีหำ"]:    
                     #gye.leaveGroup(msg.to)
                     ki1.leaveGroup(msg.to)
                     ki2.leaveGroup(msg.to)
                     ki3.leaveGroup(msg.to)
                     ki4.leaveGroup(msg.to)
-                   # ki5.leaveGroup(msg.to)
-                    #ki6.leaveGroup(msg.to)
-                    #ki7.leaveGroup(msg.to)
-                    #ki8.leaveGroup(msg.to)
-                   # ki9.leaveGroup(msg.to)
-                   # ki10.leaveGroup(msg.to)                    
-                elif text.lower() in ["ลาก่อน"]:   		
+                elif text.lower() in ["ลาก่อน"]:    
                     line.leaveGroup(msg.to)
                     ki1.leaveGroup(msg.to)
                     ki2.leaveGroup(msg.to)
                     ki3.leaveGroup(msg.to)
-                    ki4.leaveGroup(msg.to)   
-                    ki5.leaveGroup(msg.to)
-                    ki6.leaveGroup(msg.to)
-                    ki7.leaveGroup(msg.to)
-                    ki8.leaveGroup(msg.to)
-                    ki9.leaveGroup(msg.to)   
-                    ki10.leaveGroup(msg.to)                   
+                    ki4.leaveGroup(msg.to)      
                 elif text.lower() in ["มาหำ"]:    
                     G = line.getGroup(msg.to)
                     ginfo = line.getGroup(msg.to)
@@ -1388,21 +1370,15 @@ def lineBot(op):
                     invsend = 0
                     Ticket = line.reissueGroupTicket(msg.to)
                     ki1.acceptGroupInvitationByTicket(msg.to,Ticket)
-                    ki2.acceptGroupInvitationByTicket(msg.to,Ticket)              ais.acceptGroupInvitationByTicket(msg.to,Ticket)
+                    ki2.acceptGroupInvitationByTicket(msg.to,Ticket)
                     ki3.acceptGroupInvitationByTicket(msg.to,Ticket)
                     ki4.acceptGroupInvitationByTicket(msg.to,Ticket)
-#                    ki5.acceptGroupInvitationByTicket(msg.to,Ticket)
-#                    ki6.acceptGroupInvitationByTicket(msg.to,Ticket)
-#                    ki7.acceptGroupInvitationByTicket(msg.to,Ticket)
-#                    ki8.acceptGroupInvitationByTicket(msg.to,Ticket) ki2.acceptGroupInvitationByTicket(msg.to,Ticket)
-#                    ki9.acceptGroupInvitationByTicket(msg.to,Ticket)
-#                    ki10.acceptGroupInvitationByTicket(msg.to,Ticket)
                     G = line.getGroup(msg.to)
                     G.preventedJoinByTicket = True
                     line.updateGroup(G)
                     G.preventedJoinByTicket(G)
                     line.updateGroup(G)
-                
+                       
 #-------------------------------------------------------------------------------
                 elif text.lower() == 'ciak all member':
                  #   if msg._from in Owner:
