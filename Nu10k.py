@@ -1346,7 +1346,7 @@ def lineBot(op):
 #==============================================================================#                
                 elif msg.text.lower() == 'รายงานตัว':
                         line.sendContact(to, lineMID)
-			ki1.sendContact(to, ki1MID)
+                        ki1.sendContact(to, ki1MID)
                         ki2.sendContact(to, ki2MID)
                         ki3.sendContact(to, ki3MID)
                         ki4.sendContact(to, ki4MID)
