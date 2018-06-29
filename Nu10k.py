@@ -1353,8 +1353,8 @@ def lineBot(op):
                         ki5.sendContact(to, ki5MID)
                         ki6.sendContact(to, ki6MID)
                         ki7.sendContact(to, ki7MID)
-                        ki8.sendContact(to, k84MID)
-			ki9.sendContact(to, ki9MID)
+                        ki8.sendContact(to, ki8MID)
+                        ki9.sendContact(to, ki9MID)
                         ki10.sendContact(to, ki10MID)
                 elif text.lower() in ["หนีหำ"]:    
                     #gye.leaveGroup(msg.to)
