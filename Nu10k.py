@@ -1908,9 +1908,9 @@ def lineBot(op):
                         ki5.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki6.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki7.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki8.acceptGroupInvitationByTicket(op.param1,Ticket)	
-			ki9.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki10.acceptGroupInvitationByTicket(op.param1,Ticket)			 
+                       	ki8.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki9.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki10.acceptGroupInvitationByTicket(op.param1,Ticket)	 
                         G = ki4.getGroup(op.param1)
                         G.preventedJoinByTicket = True
                         ki4.updateGroup(G)
