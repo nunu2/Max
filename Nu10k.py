@@ -277,7 +277,7 @@ def sendMessageWithMention(to, mid):
 def mentionMembers(to, mid):
     try:
         arrData = ""
-        textx = "╔══[Mention {} User]\n╠ ".format(str(len(mid)))
+        textx = "╔══[รายการแอบอ่าน {} คน]\n╠ ".format(str(len(mid)))
         arr = []
         no = 1
         for i in mid:
@@ -2619,16 +2619,16 @@ def lineBot(op):
                             if " " in Name:
                                 nick = Name.split(' ')
                                 if len(nick) == 2:
-                                    line.sendMessage(op.param1, "Wᴏɪɪɪ!!!!! " + "☞ " + nick[0] + " ☜" + "\nBᴇᴛᴀʜ ᴀᴍᴀᴛ ʟᴏ ᴊᴀᴅɪ sɪᴅᴇʀ \nᴀᴅᴀ ʏᴀɴɢ ɢᴀᴊɪ ʏ ᴊᴀᴅɪ sɪᴅᴇʀ ")
-                                    time.sleep(0.2)
+                                    line.sendMessage(op.param1, "สวัสดีคนนี้ " + "☞ " + nick[0] + " ☜" + "\nรักนะแต่ไม่บอก\nออกมาคุยกันที่รัก😊 ")
+                                    time.sleep(0.1)
                                     mentionMembers(op.param1,[op.param2])
                                 else:
                                     line.sendMessage(op.param1, "Assᴀʟᴀᴍᴜᴀʟᴀɪᴋᴜᴍ " + "☞" + nick[1] + " ☜" + "\nnNɢɪɴᴛɪᴘ ᴍᴇʟᴜʟᴜ \nᴍᴇɴᴅɪɴɢ sɪɴɪ \nᴋɪᴛᴀ ɴɢᴇʀᴜᴍᴘɪ ")
-                                    time.sleep(0.2)
+                                    time.sleep(0.1)
                                     mentionMembers(op.param1,[op.param2])
                             else:
-                                line.sendMessage(op.param1, "Nᴀʜʜʜ " + "☞ " + Name + " ☜" + "\nKᴇᴛᴀᴜᴡᴀɴ ɴɢɪɴᴛɪᴘ \nHᴀʜᴀʜᴀ ")
-                                time.sleep(0.2)
+                                line.sendMessage(op.param1, "ออกมาที่รัก😊 " + "☞ " + Name + " ☜" + "\nจะแอบไปถึงไหนเดียวจิ้มตาหลุด \nออกมาคุยกันทีรัก จุฟ ")
+                                time.sleep(0.1)
                                 mentionMembers(op.param1,[op.param2])
                     else:
                         pass
