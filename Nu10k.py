@@ -13,13 +13,13 @@ from googletrans import Translator
 botStart = time.time()
 
 
-#line = LINE()
+line = LINE()
 #line = LINE("AuthToken")
 #line = LINE("Email","Password")
-line = LINE("EuC6MO54fFEARB4WTqnf.4YSrMg2oNLZ3c2qS97Qi+W.8/2BcfzP+8DkpC6exVVIjA6tSLcGTtaX2oBTCXCh4P0=")
-#line.log("Auth Token : " + str(line.authToken))
-#channelToken = line.getChannelResult()
-#line.log("Channel Token : " + str(channelToken))
+#line = LINE("EuC6MO54fFEARB4WTqnf.4YSrMg2oNLZ3c2qS97Qi+W.8/2BcfzP+8DkpC6exVVIjA6tSLcGTtaX2oBTCXCh4P0=")
+line.log("Auth Token : " + str(line.authToken))
+channelToken = line.getChannelResult()
+line.log("Channel Token : " + str(channelToken))
 
 #line = LINE()
 #line.log("Auth Token : " + str(line.authToken))
