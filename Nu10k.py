@@ -13,23 +13,23 @@ from googletrans import Translator
 botStart = time.time()
 
 
-#line = LINE()
+line = LINE()
 #line = LINE("AuthToken")
 #line = LINE("Email","Password")
-line = LINE("EuoRw38Yo2QKjZSpqrIf.4YSrMg2oNLZ3c2qS97Qi+W.b52TU046HQ4qqrSsgzrxof+xV+CAZISc4hq4y8Fvp8o=")
-#line.log("Auth Token : " + str(line.authToken))
-#channelToken = line.getChannelResult()
-#line.log("Channel Token : " + str(channelToken))
+#line = LINE("EuoRw38Yo2QKjZSpqrIf.4YSrMg2oNLZ3c2qS97Qi+W.b52TU046HQ4qqrSsgzrxof+xV+CAZISc4hq4y8Fvp8o=")
+line.log("Auth Token : " + str(line.authToken))
+channelToken = line.getChannelResult()
+line.log("Channel Token : " + str(channelToken))
 
 #ki1 = LINE()
 #ki1.log("Auth Token : " + str(line.authToken))
 #channelToken = line.getChannelResult()
 #ki1.log("Channel Token : " + str(channelToken))
 
-ki2 = LINE()
-ki2.log("Auth Token : " + str(line.authToken))
-channelToken = ki2.getChannelResult()
-ki2.log("Channel Token : " + str(channelToken))
+#ki2 = LINE()
+#ki2.log("Auth Token : " + str(line.authToken))
+#channelToken = ki2.getChannelResult()
+#ki2.log("Channel Token : " + str(channelToken))
 
 #ki3 = LINE()
 #ki3.log("Auth Token : " + str(line.authToken))
@@ -66,8 +66,8 @@ ki2.log("Channel Token : " + str(channelToken))
 #channelToken = line.getChannelResult()
 #line.log("Channel Token : " + str(channelToken))
 
-ki1 = LINE("EuXvCfe1lajSpX61jRhd.ZumT2/Y29n7tOJ4IwPo4tq.lPxnpuUPqaxLsSnVUZHrIbrp7p4sRIHrTUw7CPoJmbo=")
-#ki2 = LINE("EuoRw38Yo2QKjZSpqrIf.4YSrMg2oNLZ3c2qS97Qi+W.b52TU046HQ4qqrSsgzrxof+xV+CAZISc4hq4y8Fvp8o=")
+#ki1 = LINE("EuXvCfe1lajSpX61jRhd.ZumT2/Y29n7tOJ4IwPo4tq.lPxnpuUPqaxLsSnVUZHrIbrp7p4sRIHrTUw7CPoJmbo=")
+#ki2 = LINE("")
 #ki3 = LINE(
 #ki4
 #ki5
