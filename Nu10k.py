@@ -46,10 +46,10 @@ line = LINE("EuoRw38Yo2QKjZSpqrIf.4YSrMg2oNLZ3c2qS97Qi+W.b52TU046HQ4qqrSsgzrxof+
 #channelToken = ki5.getChannelResult()
 #ki5.log("Channel Token : " + str(channelToken))
 
-ki6 = LINE()
-ki6.log("Auth Token : " + str(line.authToken))
-channelToken = ki6.getChannelResult()
-ki6.log("Channel Token : " + str(channelToken))
+#ki6 = LINE()
+#ki6.log("Auth Token : " + str(line.authToken))
+#channelToken = ki6.getChannelResult()
+#ki6.log("Channel Token : " + str(channelToken))
 
 #line = LINE()
 #line.log("Auth Token : " + str(line.authToken))
