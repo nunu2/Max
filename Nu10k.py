@@ -326,7 +326,7 @@ def helpmessage():
                   "╠══[ Status Command ]" + "\n" + \
                   "╠ Restart" + "\n" + \
                   "╠ Runtime" + "\n" + \
-                  "╠ Speed > เช็คความเร็ว " + "\n" + \
+                  "╠ Sp > เช็คความเร็ว " + "\n" + \
                   "╠ Status" + "\n" + \
                   "╠ About" + "\n" + \
                   "╠══[ Settings Command ]" + "\n" + \
@@ -383,7 +383,7 @@ def helpmessage():
                   "╠ ScreenshootWebsite「LinkURL」" + "\n" + \
                   "╚══[🍂 ติ ด ต่ อ ส อ บ ถ า ม 🍂]" + "\n" + \
                   "╔═════════════════════┓" + "\n" + \
-                  "╠https://line.me/ti/p/-nunu_kap123 " + "\n" + \
+                  " https://line.me/ti/p/-nunu_kap123 " + "\n" + \
                   "╚═════════════════════┛" 
                                      
     return helpMessage
@@ -607,7 +607,7 @@ def lineBot(op):
                     helpTranslate = helptranslate()
                     line.sendMessage(to, str(helpTranslate))
 #==============================================================================#
-                elif text.lower() == 'speed':
+                elif text.lower() == 'Sp':
                     start = time.time()
                     line.sendMessage(to, "☞ ŦΣÄM ⚡ъਙЊъনਹਙ์⚡ BOT ☜")
                     elapsed_time = time.time() - start
