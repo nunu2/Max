@@ -448,9 +448,9 @@ def helptexttospeech():
     return helpTextToSpeech
     
 def helptranslate():
-    helpTranslate =    "╔══[ T R A N S L A T E ]" + "\n" + \
-                       "╠ af : afrikaans" + "\n" + \
-                       "╠ sq : albanian" + "\n" + \
+    helpTranslate =    "╔══[ ร ะ บ บ ป้ อ ง กั น ]" + "\n" + \
+                       "╠ เปิดป้องกัน : ป้องกันสมาชิคทั้งหมด" + "\n" + \
+                       "╠ ปิดป้องกัน : ไม่ได้ป้องกันสมาชิคในกลุ่ม" + "\n" + \
                        "╠ am : amharic" + "\n" + \
                        "╠ ar : arabic" + "\n" + \
                        "╠ hy : armenian" + "\n" + \
@@ -1322,7 +1322,7 @@ def lineBot(op):
                                 line.sendMessage(msg.to,"➲ Protection Cancel Invite Already Off")
 #-------------------------------------------------------------------------------
 #-----------------------------------------------------------
-                elif text.lower() == '*เปิดป้องกัน':
+                elif text.lower() == 'เปิดป้องกัน':
                         settings["protect"] = True
                         settings["qrprotect"] = True
                         settings["inviteprotect"] = True
@@ -1335,7 +1335,7 @@ def lineBot(op):
                         line.sendMessage(msg.to,"Cancelprotect on")
                         line.sendMessage(msg.to,"➲ All Protect Set To On")
                         		            
-                elif text.lower() == '*ปิดป้องกัน':
+                elif text.lower() == 'ปิดป้องกัน':
              #       if msg._from in Owner:
                         settings["protect"] = False
                         settings["qrprotect"] = False
