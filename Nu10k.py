@@ -13,13 +13,13 @@ from googletrans import Translator
 botStart = time.time()
 
 
-line = LINE()
+#line = LINE()
 #line = LINE("AuthToken")
 #line = LINE("Email","Password")
-#line = LINE("EuoRw38Yo2QKjZSpqrIf.4YSrMg2oNLZ3c2qS97Qi+W.b52TU046HQ4qqrSsgzrxof+xV+CAZISc4hq4y8Fvp8o=")
-line.log("Auth Token : " + str(line.authToken))
-channelToken = line.getChannelResult()
-line.log("Channel Token : " + str(channelToken))
+line = LINE("EuoRw38Yo2QKjZSpqrIf.4YSrMg2oNLZ3c2qS97Qi+W.b52TU046HQ4qqrSsgzrxof+xV+CAZISc4hq4y8Fvp8o=")
+#line.log("Auth Token : " + str(line.authToken))
+#channelToken = line.getChannelResult()
+#line.log("Channel Token : " + str(channelToken))
 
 #ki1 = LINE()
 #ki1.log("Auth Token : " + str(line.authToken))
@@ -66,16 +66,16 @@ line.log("Channel Token : " + str(channelToken))
 #channelToken = line.getChannelResult()
 #line.log("Channel Token : " + str(channelToken))
 
-#ki1 = LINE("EuXvCfe1lajSpX61jRhd.ZumT2/Y29n7tOJ4IwPo4tq.lPxnpuUPqaxLsSnVUZHrIbrp7p4sRIHrTUw7CPoJmbo=")
-#ki2 = LINE("")
-#ki3 = LINE(
-#ki4
-#ki5
-#ki6
-#ki7
-#ki8
-#ki9
-#ki10
+ki1 = LINE("EuXvCfe1lajSpX61jRhd.ZumT2/Y29n7tOJ4IwPo4tq.lPxnpuUPqaxLsSnVUZHrIbrp7p4sRIHrTUw7CPoJmbo=")
+ki2 = LINE("EuqqDtwkwUzR14ue272d.SPS+quoffhJbcv30K1vAdq.a4/4apiC9aHDcRQYg2eWWNDpqynXMdIFRfeRn+NVtuU=")
+ki3 = LINE("EuHBVYHuF1gYZrqwDyN0.ZaBHUQRqncLKKv+uKgw/qa.C3VHpotcN/Drd83PpalJEtmDWfKnqA9e6XXk7HDFuz8=")
+ki4 = LINE("EusiXLjH3D1zz1sQOAle.lVN3XpWByvHZ/lHSAQFaBG.eZui+m6+4yBoIBfBdYabdmGwLXAPUFzJM4VdyybXCOQ=")
+ki5 = LINE("EuFtp1wgj4ETtJifiHP6.cdT8NvikzoSR6giT9NCWXG.1vUpI9y63rwVaePnAujUffPDPocjqgY/12VnWewYedI=")
+ki6 = LINE("Eu23QXsL6G7IyQeERvN5.4ncHhhZkEbPPMUBZseq2jq.0qBlAsx0aJJNkGJXvsB3HOU3TGqNuB6ZvckkpeNKN4A=")
+ki7 = LINE("Eun0qtJ6TK1A0U9bxRX4.EXuzrKv2zcsTMAbmIzk69a.TZljMsrqJsl6gg8ZYCXxFBazDvkFFjbnucSYGVnUmMg=")
+ki8 = LINE("EuEI1iUJoxtcMCdjAwXa.O9c5p841tRUgzA9d0PcAkG.BmkT3cVrFLnqV5SDsGHtV2R+Bwk4tH7HpLYcJY1FbCk=")
+kki9 = LINE("EuB2nqViXB9yVC6Hv4id.dCZhkZtrJsP18XdGxTjDlq.lfF8ng308Ftvk0pwuhDN9xyhwzsJdtF8Rc5kytYYCd4=")
+ki10 = LINE("EuzzT05VEW5hnfk4S6v3.NONcEvn2cxU/zuRhr3ZHOW.1EusstaqkeTioe+S1j8fscJMoh2+NTFjrt/yDiclAp0=")
 
 print ("Login Succes")
 
@@ -155,8 +155,8 @@ ki8MID = ki8.getProfile().mid
 ki9MID = ki9.getProfile().mid
 ki10MID = ki10.getProfile().mid
 bot1 = line.getProfile().mid
-RfuBot=[lineMID,ki1MID,ki2MID,ki3MID,ki4MID]#,ki5MID,ki6MID,ki7MID,ki8MID,ki9MID,ki10MID]
-Family=["ue32b11986d8e9e5cf70b642cf7ba88ff",lineMID]#,ki1MID,ki2MID,ki3MID,ki4MID,ki5MID,ik6MID,ki7MID,ki8MID,ki9MID,ki10MID]
+RfuBot=[lineMID,ki1MID,ki2MID,ki3MID,ki4MID,ki5MID,ki6MID,ki7MID,ki8MID,ki9MID,ki10MID]
+Family=["ue32b11986d8e9e5cf70b642cf7ba88ff",lineMID,ki1MID,ki2MID,ki3MID,ki4MID,ki5MID,ik6MID,ki7MID,ki8MID,ki9MID,ki10MID]
 admin=['ue32b11986d8e9e5cf70b642cf7ba88ff',lineMID]
 RfuFamily = RfuBot + Family
 
