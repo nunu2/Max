@@ -16,10 +16,10 @@ botStart = time.time()
 #line = LINE()
 #line = LINE("AuthToken")
 #line = LINE("Email","Password")
-line = LINE("EuC6MO54fFEARB4WTqnf.4YSrMg2oNLZ3c2qS97Qi+W.8/2BcfzP+8DkpC6exVVIjA6tSLcGTtaX2oBTCXCh4P0=")
-#line.log("Auth Token : " + str(line.authToken))
-#channelToken = line.getChannelResult()
-#line.log("Channel Token : " + str(channelToken))
+line = LINE()
+line.log("Auth Token : " + str(line.authToken))
+channelToken = line.getChannelResult()
+line.log("Channel Token : " + str(channelToken))
 
 #line = LINE()
 #line.log("Auth Token : " + str(line.authToken))
@@ -2211,8 +2211,8 @@ def lineBot(op):
                         ki10.updateGroup(G)
                         settings["blacklist"][op.param2] = True
 #===============================================ระบบ2================================[kiMI
-                if op.param3 in ki1MID:
-                    if op.param2 in lineeMID:
+                elif op.param3 in ki1MID:
+                    if op.param2 in lineMID:
                         G = line.getGroup(op.param1)
                         G.preventedJoinByTicket = False
                         line.updateGroup(G)
@@ -2707,10 +2707,9 @@ def lineBot(op):
                         settings["blacklist"][op.param2] = True
 #======================================================================
 #=====================================ระบบ3=================================
-                if op.param3 in ki2MID:
+                elif op.param3 in ki2MID:
                     if op.param2 in lineMID:
                         G = line.getGroup(op.param1)
-#                        ginfo = gye.getGroup(op.param1)
                         G.preventedJoinByTicket = False
                         line.updateGroup(G)
                         invsend = 0
@@ -3195,10 +3194,9 @@ def lineBot(op):
                         ki10.updateGroup(G)
                         settings["blacklist"][op.param2] = True
 #===================================ระบบ4===============================
-                if op.param3 in ki3MID:
+                elif op.param3 in ki3MID:
                     if op.param2 in lineMID:
                         G = line.getGroup(op.param1)
-#                        ginfo = gye.getGroup(op.param1)
                         G.preventedJoinByTicket = False
                         line.updateGroup(G)
                         invsend = 0
@@ -3238,11 +3236,11 @@ def lineBot(op):
                         ki8.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki9.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki10.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        G = linee.getGroup(op.param1)
+                        G = line.getGroup(op.param1)
                         G.preventedJoinByTicket = True
                         line.updateGroup(G)
                         G.preventedJoinByTicket(G)
-                        linee.updateGroup(G)
+                        line.updateGroup(G)
                         settings["blacklist"][op.param2] = True
 #-------------------------------------------------------------------------------[ki3MID kiMID]
                 elif op.param3 in ki3MID:
@@ -3684,10 +3682,9 @@ def lineBot(op):
                         settings["blacklist"][op.param2] = True
 #===============================================ระบบ2================================[kiMI
 #=========================================ระบบ4===============================
-                if op.param3 in ki4MID:
+                elif op.param3 in ki4MID:
                     if op.param2 in lineMID:
                         G = line.getGroup(op.param1)
-#                        ginfo = gye.getGroup(op.param1)
                         G.preventedJoinByTicket = False
                         line.updateGroup(G)
                         invsend = 0
@@ -4172,10 +4169,9 @@ def lineBot(op):
                         ki10.updateGroup(G)
                         settings["blacklist"][op.param2] = True
 #===============================================ระบบ5================================[kiMI
-                if op.param3 in ki5MID:
+                elif op.param3 in ki5MID:
                     if op.param2 in lineMID:
                         G = line.getGroup(op.param1)
-#                        ginfo = gye.getGroup(op.param1)
                         G.preventedJoinByTicket = False
                         line.updateGroup(G)
                         invsend = 0
@@ -4215,11 +4211,11 @@ def lineBot(op):
                         ki8.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki9.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki10.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        G = linee.getGroup(op.param1)
+                        G = line.getGroup(op.param1)
                         G.preventedJoinByTicket = True
                         line.updateGroup(G)
                         G.preventedJoinByTicket(G)
-                        linee.updateGroup(G)
+                        line.updateGroup(G)
                         settings["blacklist"][op.param2] = True
 #-------------------------------------------------------------------------------[ki3MID kiMID]
                 elif op.param3 in ki5MID:
@@ -4620,10 +4616,9 @@ def lineBot(op):
                         ki10.updateGroup(G)
                         settings["blacklist"][op.param2] = True
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ระบบ6~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-                if op.param3 in ki6MID:
+                elif op.param3 in ki6MID:
                     if op.param2 in lineMID:
                         G = line.getGroup(op.param1)
-#                        ginfo = gye.getGroup(op.param1)
                         G.preventedJoinByTicket = False
                         line.updateGroup(G)
                         invsend = 0
@@ -4663,11 +4658,11 @@ def lineBot(op):
                         ki8.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki9.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki10.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        G = linee.getGroup(op.param1)
+                        G = line.getGroup(op.param1)
                         G.preventedJoinByTicket = True
                         line.updateGroup(G)
                         G.preventedJoinByTicket(G)
-                        linee.updateGroup(G)
+                        line.updateGroup(G)
                         settings["blacklist"][op.param2] = True
 #-------------------------------------------------------------------------------[ki3MID kiMID]
                 elif op.param3 in ki6MID:
@@ -4966,56 +4961,7 @@ def lineBot(op):
                         ki7.updateGroup(G)
                         G.preventedJoinByTicket(G)
                         ki7.updateGroup(G)
-                        settings["blacklist"][op.param2] = True		
-                if op.param3 in ki3MID:
-                    if op.param2 in lineMID:
-                        G = line.getGroup(op.param1)
-#                        ginfo = gye.getGroup(op.param1)
-                        G.preventedJoinByTicket = False
-                        line.updateGroup(G)
-                        invsend = 0
-                        Ticket = line.reissueGroupTicket(op.param1)
-                        line.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki6.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki7.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki8.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki9.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki10.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        G = line.getGroup(op.param1)
-                        G.preventedJoinByTicket = True
-                        line.updateGroup(G)
-                        G.preventedJoinByTicket(G)
-                        line.updateGroup(G)
-                    else:
-                        G = line.getGroup(op.param1)
-#                        ginfo = gye.getGroup(op.param1)
-                        line.kickoutFromGroup(op.param1,[op.param2])
-                        G.preventedJoinByTicket = False
-                        line.updateGroup(G)
-                        invsend = 0
-                        Ticket = line.reissueGroupTicket(op.param1)
-                        line.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki6.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki7.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki8.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki9.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki10.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        G = linee.getGroup(op.param1)
-                        G.preventedJoinByTicket = True
-                        line.updateGroup(G)
-                        G.preventedJoinByTicket(G)
-                        linee.updateGroup(G)
-                        settings["blacklist"][op.param2] = True
+                        settings["blacklist"][op.param2] = True	                    
 #-------------------------------------------------------------------------------[ki3MID kiMID]
                 elif op.param3 in ki6MID:
                     if op.param2 in ki8MID:
@@ -5166,10 +5112,9 @@ def lineBot(op):
                         ki10.updateGroup(G)
                         settings["blacklist"][op.param2] = True
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~ระบบ7~~~~~~~~~~~~~~~~~~~~~~~~~#
-                if op.param3 in ki7MID:
+                elif op.param3 in ki7MID:
                     if op.param2 in lineMID:
                         G = line.getGroup(op.param1)
-#                        ginfo = gye.getGroup(op.param1)
                         G.preventedJoinByTicket = False
                         line.updateGroup(G)
                         invsend = 0
@@ -5209,11 +5154,11 @@ def lineBot(op):
                         ki8.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki9.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki10.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        G = linee.getGroup(op.param1)
+                        G = line.getGroup(op.param1)
                         G.preventedJoinByTicket = True
                         line.updateGroup(G)
                         G.preventedJoinByTicket(G)
-                        linee.updateGroup(G)
+                        line.updateGroup(G)
                         settings["blacklist"][op.param2] = True
 #-------------------------------------------------------------------------------[ki3MID kiMID]
                 elif op.param3 in ki7MID:
@@ -5416,109 +5361,10 @@ def lineBot(op):
                         settings["blacklist"][op.param2] = True
 #-----------------------------------------------------------------
 #-----------------------------------------------------------------
-                elif op.param3 in ki3MID:
-                    if op.param2 in ki2MID:
-                        G = ki2.getGroup(op.param1)
-#                        ginfo = ki2.getGroup(op.param1)
-                        G.preventedJoinByTicket = False
-                        ki2.updateGroup(G)
-                        invsend = 0
-                        Ticket = ki2.reissueGroupTicket(op.param1)
-                        line.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki6.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki7.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki8.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki9.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki10.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        G = ki2.getGroup(op.param1)
-                        G.preventedJoinByTicket = True
-                        ki2.updateGroup(G)
-                        G.preventedJoinByTicket(G)
-                        ki2.updateGroup(G)
-                    else:
-                        G = ki2.getGroup(op.param1)
-#                        ginfo = ki2.getGroup(op.param1)
-                        ki2.kickoutFromGroup(op.param1,[op.param2])
-                        G.preventedJoinByTicket = False
-                        ki2.updateGroup(G)
-                        invsend = 0
-                        Ticket = ki2.reissueGroupTicket(op.param1)
-                        line.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki6.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki7.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki8.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki9.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki10.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        G = ki2.getGroup(op.param1)
-                        G.preventedJoinByTicket = True
-                        ki2.updateGroup(G)
-                        G.preventedJoinByTicket(G)
-                        ki2.updateGroup(G)
-                        settings["blacklist"][op.param2] = True
-#-------------------------------------------------------------------------------[ki3MID ki4MID]
-                elif op.param3 in ki3MID:
-                    if op.param2 in ki4MID:
-                        G = ki4.getGroup(op.param1)
-#                        ginfo = ki4.getGroup(op.param1)
-                        G.preventedJoinByTicket = False
-                        ki4.updateGroup(G)
-                        invsend = 0
-                        Ticket = ki4.reissueGroupTicket(op.param1)
-                        line.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki6.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki7.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki8.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki9.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki10.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        G = ki4.getGroup(op.param1)
-                        G.preventedJoinByTicket = True
-                        ki4.updateGroup(G)
-                        G.preventedJoinByTicket(G)
-                        ki4.updateGroup(G)
-                    else:
-                        G = ki4.getGroup(op.param1)
-#                        ginfo = ki4.getGroup(op.param1)
-                        ki4.kickoutFromGroup(op.param1,[op.param2])
-                        G.preventedJoinByTicket = False
-                        ki4.updateGroup(G)
-                        invsend = 0
-                        Ticket = ki4.reissueGroupTicket(op.param1)
-                        line.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki6.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki7.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki8.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki9.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki10.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        G = ki4.getGroup(op.param1)
-                        G.preventedJoinByTicket = True
-                        ki4.updateGroup(G)
-                        G.preventedJoinByTicket(G)
-                        ki4.updateGroup(G)
-                        settings["blacklist"][op.param2] = True
-#-------------------------------------------------------------------------------[gyeMID - ki2MID]
                 elif op.param3 in ki7MID:
                     if op.param2 in ki5MID:
                         G = ki5.getGroup(op.param1)
+#                        ginfo = ki2.getGroup(op.param1)
                         G.preventedJoinByTicket = False
                         ki5.updateGroup(G)
                         invsend = 0
@@ -5527,7 +5373,7 @@ def lineBot(op):
                         ki1.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki4.acceptGroupInvitationByTicket(op.param1,Ticket)		
+                        ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki5.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki6.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki7.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -5541,6 +5387,7 @@ def lineBot(op):
                         ki5.updateGroup(G)
                     else:
                         G = ki5.getGroup(op.param1)
+#                        ginfo = ki2.getGroup(op.param1)
                         ki5.kickoutFromGroup(op.param1,[op.param2])
                         G.preventedJoinByTicket = False
                         ki5.updateGroup(G)
@@ -5563,11 +5410,11 @@ def lineBot(op):
                         G.preventedJoinByTicket(G)
                         ki5.updateGroup(G)
                         settings["blacklist"][op.param2] = True
-#-----------------------------------------------------------------
-#-------------------------------------------------------------------------------[kiMID ki2MID]
+#-------------------------------------------------------------------------------[ki3MID ki4MID]
                 elif op.param3 in ki7MID:
                     if op.param2 in ki6MID:
                         G = ki6.getGroup(op.param1)
+#                        ginfo = ki4.getGroup(op.param1)
                         G.preventedJoinByTicket = False
                         ki6.updateGroup(G)
                         invsend = 0
@@ -5582,7 +5429,7 @@ def lineBot(op):
                         ki7.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki8.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki9.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki10.acceptGroupInvitationByTicket(op.param1,Ticket)   
+                        ki10.acceptGroupInvitationByTicket(op.param1,Ticket)
                         G = ki6.getGroup(op.param1)
                         G.preventedJoinByTicket = True
                         ki6.updateGroup(G)
@@ -5590,7 +5437,7 @@ def lineBot(op):
                         ki6.updateGroup(G)
                     else:
                         G = ki6.getGroup(op.param1)
-#                        ginfo = ki2.getGroup(op.param1)
+#                        ginfo = ki4.getGroup(op.param1)
                         ki6.kickoutFromGroup(op.param1,[op.param2])
                         G.preventedJoinByTicket = False
                         ki6.updateGroup(G)
@@ -5613,7 +5460,7 @@ def lineBot(op):
                         G.preventedJoinByTicket(G)
                         ki6.updateGroup(G)
                         settings["blacklist"][op.param2] = True
-#-------------------------------------------------------------------------------[kiMID ki2MID]
+#-------------------------------------------------------------------------------[gyeMID - ki2MID]
                 elif op.param3 in ki7MID:
                     if op.param2 in ki8MID:
                         G = ki8.getGroup(op.param1)
@@ -5625,13 +5472,13 @@ def lineBot(op):
                         ki1.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki4.acceptGroupInvitationByTicket(op.param1,Ticket)		
                         ki5.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki6.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki7.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki8.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki9.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki10.acceptGroupInvitationByTicket(op.param1,Ticket)   
+                        ki10.acceptGroupInvitationByTicket(op.param1,Ticket)
                         G = ki8.getGroup(op.param1)
                         G.preventedJoinByTicket = True
                         ki8.updateGroup(G)
@@ -5639,7 +5486,6 @@ def lineBot(op):
                         ki8.updateGroup(G)
                     else:
                         G = ki8.getGroup(op.param1)
-#                        ginfo = ki2.getGroup(op.param1)
                         ki8.kickoutFromGroup(op.param1,[op.param2])
                         G.preventedJoinByTicket = False
                         ki8.updateGroup(G)
@@ -5662,6 +5508,7 @@ def lineBot(op):
                         G.preventedJoinByTicket(G)
                         ki8.updateGroup(G)
                         settings["blacklist"][op.param2] = True
+#-----------------------------------------------------------------
 #-------------------------------------------------------------------------------[kiMID ki2MID]
                 elif op.param3 in ki7MID:
                     if op.param2 in ki9MID:
@@ -5759,12 +5606,11 @@ def lineBot(op):
                         ki10.updateGroup(G)
                         G.preventedJoinByTicket(G)
                         ki10.updateGroup(G)
-                        settings["blacklist"][op.param2] = True
+                        settings["blacklist"][op.param2] = True                      
 #---------------------------ระบบ8----------------------------------------------------[kiMID ki2MID]
-                if op.param3 in ki8MID:
+                elif op.param3 in ki8MID:
                     if op.param2 in lineMID:
                         G = line.getGroup(op.param1)
-#                        ginfo = gye.getGroup(op.param1)
                         G.preventedJoinByTicket = False
                         line.updateGroup(G)
                         invsend = 0
@@ -5804,11 +5650,11 @@ def lineBot(op):
                         ki8.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki9.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki10.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        G = linee.getGroup(op.param1)
+                        G = line.getGroup(op.param1)
                         G.preventedJoinByTicket = True
                         line.updateGroup(G)
                         G.preventedJoinByTicket(G)
-                        linee.updateGroup(G)
+                        line.updateGroup(G)
                         settings["blacklist"][op.param2] = True
 #-------------------------------------------------------------------------------[ki3MID kiMID]
                 elif op.param3 in ki8MID:
@@ -5913,9 +5759,58 @@ def lineBot(op):
                         settings["blacklist"][op.param2] = True
 #-------------------------------------------------------------------------------[ki3MID ki4MID]
                 elif op.param3 in ki8MID:
+                    if op.param2 in ki3MID:
+                        G = ki3.getGroup(op.param1)
+#                        ginfo = ki4.getGroup(op.param1)
+                        G.preventedJoinByTicket = False
+                        ki3.updateGroup(G)
+                        invsend = 0
+                        Ticket = ki3.reissueGroupTicket(op.param1)
+                        line.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki1.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki5.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki6.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki7.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki8.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki9.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki10.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        G = ki3.getGroup(op.param1)
+                        G.preventedJoinByTicket = True
+                        ki3.updateGroup(G)
+                        G.preventedJoinByTicket(G)
+                        ki3.updateGroup(G)
+                    else:
+                        G = ki3.getGroup(op.param1)
+#                        ginfo = ki4.getGroup(op.param1)
+                        ki3.kickoutFromGroup(op.param1,[op.param2])
+                        G.preventedJoinByTicket = False
+                        ki3.updateGroup(G)
+                        invsend = 0
+                        Ticket = ki3.reissueGroupTicket(op.param1)
+                        line.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki1.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki5.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki6.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki7.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki8.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki9.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki10.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        G = ki3.getGroup(op.param1)
+                        G.preventedJoinByTicket = True
+                        ki3.updateGroup(G)
+                        G.preventedJoinByTicket(G)
+                        ki3.updateGroup(G)
+                        settings["blacklist"][op.param2] = True
+#-------------------------------------------------------------------------------[gyeMID - ki2MID]
+                elif op.param3 in ki8MID:
                     if op.param2 in ki4MID:
                         G = ki4.getGroup(op.param1)
-#                        ginfo = ki4.getGroup(op.param1)
                         G.preventedJoinByTicket = False
                         ki4.updateGroup(G)
                         invsend = 0
@@ -5924,7 +5819,7 @@ def lineBot(op):
                         ki1.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki4.acceptGroupInvitationByTicket(op.param1,Ticket)		
                         ki5.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki6.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki7.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -5938,7 +5833,6 @@ def lineBot(op):
                         ki4.updateGroup(G)
                     else:
                         G = ki4.getGroup(op.param1)
-#                        ginfo = ki4.getGroup(op.param1)
                         ki4.kickoutFromGroup(op.param1,[op.param2])
                         G.preventedJoinByTicket = False
                         ki4.updateGroup(G)
@@ -5961,7 +5855,7 @@ def lineBot(op):
                         G.preventedJoinByTicket(G)
                         ki4.updateGroup(G)
                         settings["blacklist"][op.param2] = True
-#-------------------------------------------------------------------------------[gyeMID - ki2MID]
+#-----------------------------------------------------------------
                 elif op.param3 in ki8MID:
                     if op.param2 in ki5MID:
                         G = ki5.getGroup(op.param1)
@@ -5973,13 +5867,13 @@ def lineBot(op):
                         ki1.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki4.acceptGroupInvitationByTicket(op.param1,Ticket)		
+                        ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki5.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki6.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki7.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki8.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki9.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki10.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki10.acceptGroupInvitationByTicket(op.param1,Ticket)   
                         G = ki5.getGroup(op.param1)
                         G.preventedJoinByTicket = True
                         ki5.updateGroup(G)
@@ -5987,6 +5881,7 @@ def lineBot(op):
                         ki5.updateGroup(G)
                     else:
                         G = ki5.getGroup(op.param1)
+#                        ginfo = ki2.getGroup(op.param1)
                         ki5.kickoutFromGroup(op.param1,[op.param2])
                         G.preventedJoinByTicket = False
                         ki5.updateGroup(G)
@@ -6156,11 +6051,59 @@ def lineBot(op):
                         G.preventedJoinByTicket(G)
                         ki9.updateGroup(G)
                         settings["blacklist"][op.param2] = True
+#-----------------------------------------------------------------
+                elif op.param3 in ki8MID:
+                    if op.param2 in ki10MID:
+                        G = ki10.getGroup(op.param1)
+                        G.preventedJoinByTicket = False
+                        ki10.updateGroup(G)
+                        invsend = 0
+                        Ticket = ki10.reissueGroupTicket(op.param1)
+                        line.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki1.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki5.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki6.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki7.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki8.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki9.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki10.acceptGroupInvitationByTicket(op.param1,Ticket)   
+                        G = ki10.getGroup(op.param1)
+                        G.preventedJoinByTicket = True
+                        ki10.updateGroup(G)
+                        G.preventedJoinByTicket(G)
+                        ki10.updateGroup(G)
+                    else:
+                        G = ki10.getGroup(op.param1)
+#                        ginfo = ki2.getGroup(op.param1)
+                        ki10.kickoutFromGroup(op.param1,[op.param2])
+                        G.preventedJoinByTicket = False
+                        ki10.updateGroup(G)
+                        invsend = 0
+                        Ticket = ki10.reissueGroupTicket(op.param1)
+                        line.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki1.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki5.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki6.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki7.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki8.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki9.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ki10.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        G = ki10.getGroup(op.param1)
+                        G.preventedJoinByTicket = True
+                        ki10.updateGroup(G)
+                        G.preventedJoinByTicket(G)
+                        ki10.updateGroup(G)
+                        settings["blacklist"][op.param2] = True
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ระบบ9~~~~~~~~~~~~~~~~~~#
-                if op.param3 in ki9MID:
+                elif op.param3 in ki9MID:
                     if op.param2 in lineMID:
                         G = line.getGroup(op.param1)
-#                        ginfo = gye.getGroup(op.param1)
                         G.preventedJoinByTicket = False
                         line.updateGroup(G)
                         invsend = 0
@@ -6200,11 +6143,11 @@ def lineBot(op):
                         ki8.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki9.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki10.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        G = linee.getGroup(op.param1)
+                        G = line.getGroup(op.param1)
                         G.preventedJoinByTicket = True
                         line.updateGroup(G)
                         G.preventedJoinByTicket(G)
-                        linee.updateGroup(G)
+                        line.updateGroup(G)
                         settings["blacklist"][op.param2] = True
 #-------------------------------------------------------------------------------[ki3MID kiMID]
                 elif op.param3 in ki9MID:
@@ -6652,10 +6595,9 @@ def lineBot(op):
                         ki10.updateGroup(G)
                         settings["blacklist"][op.param2] = True
 #~~~~~~~~~~~~~~~~~~~~~~~~[ระบบ10]~~~~~~~~~~~~~~~~~~~~~~#
-                if op.param3 in ki10MID:
+                elif op.param3 in ki10MID:
                     if op.param2 in lineMID:
                         G = line.getGroup(op.param1)
-#                        ginfo = gye.getGroup(op.param1)
                         G.preventedJoinByTicket = False
                         line.updateGroup(G)
                         invsend = 0
@@ -6695,11 +6637,11 @@ def lineBot(op):
                         ki8.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki9.acceptGroupInvitationByTicket(op.param1,Ticket)
                         ki10.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        G = linee.getGroup(op.param1)
+                        G = line.getGroup(op.param1)
                         G.preventedJoinByTicket = True
                         line.updateGroup(G)
                         G.preventedJoinByTicket(G)
-                        linee.updateGroup(G)
+                        line.updateGroup(G)
                         settings["blacklist"][op.param2] = True
 #-------------------------------------------------------------------------------[ki3MID kiMID]
                 elif op.param3 in ki10MID:
