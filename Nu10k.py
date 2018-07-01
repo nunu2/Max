@@ -156,7 +156,7 @@ ki9MID = ki9.getProfile().mid
 ki10MID = ki10.getProfile().mid
 bot1 = line.getProfile().mid
 RfuBot=[lineMID,ki1MID,ki2MID,ki3MID,ki4MID,ki5MID,ki6MID,ki7MID,ki8MID,ki9MID,ki10MID]
-Family=["ue32b11986d8e9e5cf70b642cf7ba88ff",lineMID]#,ki1MID,ki2MID,ki3MID,ki4MID,ki5MID,ik6MID,ki7MID,ki8MID,ki9MID,ki10MID]
+Family=["ue32b11986d8e9e5cf70b642cf7ba88ff",lineMID,ki1MID,ki2MID,ki3MID,ki4MID,ki5MID,ki6MID,ki7MID,ki8MID,ki9MID,ki10MID]
 admin=['ue32b11986d8e9e5cf70b642cf7ba88ff',lineMID]
 RfuFamily = RfuBot + Family
 
