@@ -70,7 +70,7 @@ ki1 = LINE("EuJMO4zMJuVIB9Q7r6Kd.ZumT2/Y29n7tOJ4IwPo4tq.7iNJvgf7kfqhYzxqffWaZ9Xy
 ki2 = LINE("EufjpqADebzNQpbd6dEd.SPS+quoffhJbcv30K1vAdq.fILrF4NH6a+DGt2vwdX3nezm2rx6mbU+IjBd++1RgHQ=")
 ki3 = LINE("EuYHclxrzqW0XDSCiiw0.ZaBHUQRqncLKKv+uKgw/qa.VKgQeUjmWt79dLrKaLwJVzz8PCvzVj+FKBKI8Oezs/s=")
 ki4 = LINE("EuiBvYshQqZHJSzRAV3e.lVN3XpWByvHZ/lHSAQFaBG.b7z7iEocCtaW7H4Z8H4m/zTdzUxwBKKDMnliuhm91v8=")
-ki5 = LINE("EudeqvTrU4oZLcXofeUe.JSDIzYFeiwucdLJfbHTRFG.cqVy7LV6hf27F73XFa1vicjuHdzp8OIEB3vmeDUvHLA=")
+#ki5 = LINE("EudeqvTrU4oZLcXofeUe.JSDIzYFeiwucdLJfbHTRFG.cqVy7LV6hf27F73XFa1vicjuHdzp8OIEB3vmeDUvHLA=")
 #ki6 = LINE("")
 #ki7 = LINE("")
 #ki8 = LINE("")
