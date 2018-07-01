@@ -16,10 +16,10 @@ botStart = time.time()
 line = LINE()
 #line = LINE("AuthToken")
 #line = LINE("Email","Password")
-#line = LINE("EuC6MO54fFEARB4WTqnf.4YSrMg2oNLZ3c2qS97Qi+W.8/2BcfzP+8DkpC6exVVIjA6tSLcGTtaX2oBTCXCh4P0=")
-line.log("Auth Token : " + str(line.authToken))
-channelToken = line.getChannelResult()
-line.log("Channel Token : " + str(channelToken))
+line = LINE("EuC6MO54fFEARB4WTqnf.4YSrMg2oNLZ3c2qS97Qi+W.8/2BcfzP+8DkpC6exVVIjA6tSLcGTtaX2oBTCXCh4P0=")
+#line.log("Auth Token : " + str(line.authToken))
+#channelToken = line.getChannelResult()
+#line.log("Channel Token : " + str(channelToken))
 
 #line = LINE()
 #line.log("Auth Token : " + str(line.authToken))
@@ -70,12 +70,12 @@ ki1 = LINE("EuJMO4zMJuVIB9Q7r6Kd.ZumT2/Y29n7tOJ4IwPo4tq.7iNJvgf7kfqhYzxqffWaZ9Xy
 ki2 = LINE("EufjpqADebzNQpbd6dEd.SPS+quoffhJbcv30K1vAdq.fILrF4NH6a+DGt2vwdX3nezm2rx6mbU+IjBd++1RgHQ=")
 ki3 = LINE("EuYHclxrzqW0XDSCiiw0.ZaBHUQRqncLKKv+uKgw/qa.VKgQeUjmWt79dLrKaLwJVzz8PCvzVj+FKBKI8Oezs/s=")
 ki4 = LINE("EuiBvYshQqZHJSzRAV3e.lVN3XpWByvHZ/lHSAQFaBG.b7z7iEocCtaW7H4Z8H4m/zTdzUxwBKKDMnliuhm91v8=")
-#ki5 = LINE("EudeqvTrU4oZLcXofeUe.JSDIzYFeiwucdLJfbHTRFG.cqVy7LV6hf27F73XFa1vicjuHdzp8OIEB3vmeDUvHLA=")
-#ki6 = LINE("EuPy7eAHXkpaNFUcuBd8.UPvTJfNp3ChPiXCo92e4Ea.Cwn+GnCJLdgzV9ZO23p3X+jB7VTNun1nb4F0e64RRIU=")
-#ki7 = LINE("Eu3mwOHZf1SOBMEYhDV5.4ncHhhZkEbPPMUBZseq2jq.PS71JLvZnFkzmsGdUicnUAYucI9F4ErPbsJVKtRhbCs=")
-#ki8 = LINE("EuwKYwDhppf80qgYkO74.EXuzrKv2zcsTMAbmIzk69a.OB77x3Ypl1N8pdkWDEzLxJ9aZz/V/xQIdOeqLiClByQ=")
-#ki9 = LINE("Eu1WgUyYjitSTCMH708e.zIpOv3rmPI3xaePd+NoD3G.vquey8Mzw9kVsnNyC5WiUKyW/Zn5WxrS+0ND5nke/Sg=")
-#ki10 = LINE("")
+ki5 = LINE("EudeqvTrU4oZLcXofeUe.JSDIzYFeiwucdLJfbHTRFG.cqVy7LV6hf27F73XFa1vicjuHdzp8OIEB3vmeDUvHLA=")
+ki6 = LINE("EuPy7eAHXkpaNFUcuBd8.UPvTJfNp3ChPiXCo92e4Ea.Cwn+GnCJLdgzV9ZO23p3X+jB7VTNun1nb4F0e64RRIU=")
+ki7 = LINE("Eu3mwOHZf1SOBMEYhDV5.4ncHhhZkEbPPMUBZseq2jq.PS71JLvZnFkzmsGdUicnUAYucI9F4ErPbsJVKtRhbCs=")
+ki8 = LINE("EuwKYwDhppf80qgYkO74.EXuzrKv2zcsTMAbmIzk69a.OB77x3Ypl1N8pdkWDEzLxJ9aZz/V/xQIdOeqLiClByQ=")
+ki9 = LINE("Eu1WgUyYjitSTCMH708e.zIpOv3rmPI3xaePd+NoD3G.vquey8Mzw9kVsnNyC5WiUKyW/Zn5WxrS+0ND5nke/Sg=")
+ki10 = LINE("EuBK6AUMLmyHGk4KL4u2.U/SdRc5EA9WyXnlPUnZDaG.E6ENedF2SiY2VPDRxfCmuO9pHeNn/tdR7dyHvn93Ya0=")
 
 print ("Login Succes")
 
@@ -99,37 +99,37 @@ ki4MID = ki4.profile.mid
 ki4Profile = ki4.getProfile()
 ki4Settings = ki4.getSettings()
 
-#ki5MID = ki5.profile.mid
-#ki5Profile = ki5.getProfile()
-#ki5Settings = ki5.getSettings()
+ki5MID = ki5.profile.mid
+ki5Profile = ki5.getProfile()
+ki5Settings = ki5.getSettings()
 
-#ki6MID = ki6.profile.mid
-#ki6Profile = ki6.getProfile()
-#ki6Settings = ki6.getSettings()
+ki6MID = ki6.profile.mid
+ki6Profile = ki6.getProfile()
+ki6Settings = ki6.getSettings()
 
-#ki7MID = ki7.profile.mid
-#ki7Profile = ki7.getProfile()
-#ki7Settings = ki7.getSettings()
+ki7MID = ki7.profile.mid
+ki7Profile = ki7.getProfile()
+ki7Settings = ki7.getSettings()
 
-#ki8MID = ki8.profile.mid
-#ki8Profile = ki8.getProfile()
-#ki8Settings = ki8.getSettings()
+ki8MID = ki8.profile.mid
+ki8Profile = ki8.getProfile()
+ki8Settings = ki8.getSettings()
 
-#ki9MID = ki9.profile.mid
-#ki9Profile = ki9.getProfile()
-#ki9Settings = ki9.getSettings()
+ki9MID = ki9.profile.mid
+ki9Profile = ki9.getProfile()
+ki9Settings = ki9.getSettings()
 
-#ki10MID = ki10.profile.mid
-#ki10Profile = ki10.getProfile()
-#ki10Settings = ki10.getSettings()
+ki10MID = ki10.profile.mid
+ki10Profile = ki10.getProfile()
+ki10Settings = ki10.getSettings()
 
 
-#oepoll = OEPoll(ki10)
-#oepoll = OEPoll(ki9)
-#oepoll = OEPoll(ki8)
-#oepoll = OEPoll(ki7)
-#oepoll = OEPoll(ki6)
-#oepoll = OEPoll(ki5)
+oepoll = OEPoll(ki10)
+oepoll = OEPoll(ki9)
+oepoll = OEPoll(ki8)
+oepoll = OEPoll(ki7)
+oepoll = OEPoll(ki6)
+oepoll = OEPoll(ki5)
 oepoll = OEPoll(ki4)
 oepoll = OEPoll(ki3)
 oepoll = OEPoll(ki2)
@@ -141,19 +141,19 @@ settingsOpen = codecs.open("temp.json","r","utf-8")
 
 read = json.load(readOpen)
 settings = json.load(settingsOpen)
-Rfu = [line,ki1,ki2,ki3,ki4]#,ki5,ki6,ki7,ki8,ki9,ki10]
-Exc = [ki1,ki2,ki3,ki4]#,ki5,ki6,ki7,ki8,ki9,ki10]
+Rfu = [line,ki1,ki2,ki3,ki4,ki5,ki6,ki7,ki8,ki9,ki10]
+Exc = [ki1,ki2,ki3,ki4,ki5,ki6,ki7,ki8,ki9,ki10]
 lineMID = line.getProfile().mid
 ki1MID = ki1.getProfile().mid
 ki2MID = ki2.getProfile().mid
 ki3MID = ki3.getProfile().mid
 ki4MID = ki4.getProfile().mid
-#ki5MID = ki5.getProfile().mid
-#ki6MID = ki6.getProfile().mid
-#ki7MID = ki7.getProfile().mid
-#ki8MID = ki8.getProfile().mid
-#ki9MID = ki9.getProfile().mid
-#ki10MID = ki10.getProfile().mid
+ki5MID = ki5.getProfile().mid
+ki6MID = ki6.getProfile().mid
+ki7MID = ki7.getProfile().mid
+ki8MID = ki8.getProfile().mid
+ki9MID = ki9.getProfile().mid
+ki10MID = ki10.getProfile().mid
 bot1 = line.getProfile().mid
 RfuBot=[lineMID,ki1MID,ki2MID,ki3MID,ki4MID]#,ki5MID,ki6MID,ki7MID,ki8MID,ki9MID,ki10MID]
 Family=["ue32b11986d8e9e5cf70b642cf7ba88ff",lineMID]#,ki1MID,ki2MID,ki3MID,ki4MID,ki5MID,ik6MID,ki7MID,ki8MID,ki9MID,ki10MID]
@@ -1367,12 +1367,12 @@ def lineBot(op):
                     ki2.leaveGroup(msg.to)
                     ki3.leaveGroup(msg.to)
                     ki4.leaveGroup(msg.to)
-                    #ki5.leaveGroup(msg.to)
-                    #ki6.leaveGroup(msg.to)
-                    #ki7.leaveGroup(msg.to)
-                    #ki8.leaveGroup(msg.to)
-                    #ki9.leaveGroup(msg.to)
-                    #ki10.leaveGroup(msg.to)                    
+                    ki5.leaveGroup(msg.to)
+                    ki6.leaveGroup(msg.to)
+                    ki7.leaveGroup(msg.to)
+                    ki8.leaveGroup(msg.to)
+                    ki9.leaveGroup(msg.to)
+                    ki10.leaveGroup(msg.to)                    
                 elif text.lower() in ["ลาก่อน"]:
                     line.leaveGroup(msg.to)
                     ki1.leaveGroup(msg.to)
@@ -1396,12 +1396,12 @@ def lineBot(op):
                     ki2.acceptGroupInvitationByTicket(msg.to,Ticket)
                     ki3.acceptGroupInvitationByTicket(msg.to,Ticket)
                     ki4.acceptGroupInvitationByTicket(msg.to,Ticket)
-                    #ki5.acceptGroupInvitationByTicket(msg.to,Ticket)
-                    #ki6.acceptGroupInvitationByTicket(msg.to,Ticket)		
-                    #ki7.acceptGroupInvitationByTicket(msg.to,Ticket)
-                    #ki8.acceptGroupInvitationByTicket(msg.to,Ticket)
-                    #ki9.acceptGroupInvitationByTicket(msg.to,Ticket)
-                    #ki10.acceptGroupInvitationByTicket(msg.to,Ticket)                    	
+                    ki5.acceptGroupInvitationByTicket(msg.to,Ticket)
+                    ki6.acceptGroupInvitationByTicket(msg.to,Ticket)		
+                    ki7.acceptGroupInvitationByTicket(msg.to,Ticket)
+                    ki8.acceptGroupInvitationByTicket(msg.to,Ticket)
+                    ki9.acceptGroupInvitationByTicket(msg.to,Ticket)
+                    ki10.acceptGroupInvitationByTicket(msg.to,Ticket)                    	
                     G = line.getGroup(msg.to)
                     G.preventedJoinByTicket = True
                     line.updateGroup(G)
