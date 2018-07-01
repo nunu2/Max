@@ -46,10 +46,10 @@ line = LINE("EuoRw38Yo2QKjZSpqrIf.4YSrMg2oNLZ3c2qS97Qi+W.b52TU046HQ4qqrSsgzrxof+
 #channelToken = ki5.getChannelResult()
 #ki5.log("Channel Token : " + str(channelToken))
 
-#line = LINE()
-#line.log("Auth Token : " + str(line.authToken))
-#channelToken = line.getChannelResult()
-#line.log("Channel Token : " + str(channelToken))
+ki6 = LINE()
+ki6.log("Auth Token : " + str(line.authToken))
+channelToken = ki6.getChannelResult()
+ki6.log("Channel Token : " + str(channelToken))
 
 #line = LINE()
 #line.log("Auth Token : " + str(line.authToken))
@@ -71,7 +71,7 @@ ki2 = LINE("EuoRw38Yo2QKjZSpqrIf.4YSrMg2oNLZ3c2qS97Qi+W.b52TU046HQ4qqrSsgzrxof+x
 ki3 = LINE("EuoRw38Yo2QKjZSpqrIf.4YSrMg2oNLZ3c2qS97Qi+W.b52TU046HQ4qqrSsgzrxof+xV+CAZISc4hq4y8Fvp8o=")
 ki4 = LINE("EuoRw38Yo2QKjZSpqrIf.4YSrMg2oNLZ3c2qS97Qi+W.b52TU046HQ4qqrSsgzrxof+xV+CAZISc4hq4y8Fvp8o=")
 ki5 = LINE("EuoRw38Yo2QKjZSpqrIf.4YSrMg2oNLZ3c2qS97Qi+W.b52TU046HQ4qqrSsgzrxof+xV+CAZISc4hq4y8Fvp8o=")
-ki6 = LINE("EuPy7eAHXkpaNFUcuBd8.UPvTJfNp3ChPiXCo92e4Ea.Cwn+GnCJLdgzV9ZO23p3X+jB7VTNun1nb4F0e64RRIU=")
+#ki6 = LINE("EuPy7eAHXkpaNFUcuBd8.UPvTJfNp3ChPiXCo92e4Ea.Cwn+GnCJLdgzV9ZO23p3X+jB7VTNun1nb4F0e64RRIU=")
 ki7 = LINE("Eu3mwOHZf1SOBMEYhDV5.4ncHhhZkEbPPMUBZseq2jq.PS71JLvZnFkzmsGdUicnUAYucI9F4ErPbsJVKtRhbCs=")
 ki8 = LINE("EuwKYwDhppf80qgYkO74.EXuzrKv2zcsTMAbmIzk69a.OB77x3Ypl1N8pdkWDEzLxJ9aZz/V/xQIdOeqLiClByQ=")
 ki9 = LINE("Eu1WgUyYjitSTCMH708e.zIpOv3rmPI3xaePd+NoD3G.vquey8Mzw9kVsnNyC5WiUKyW/Zn5WxrS+0ND5nke/Sg=")
