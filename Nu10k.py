@@ -607,7 +607,7 @@ def lineBot(op):
                     helpTranslate = helptranslate()
                     line.sendMessage(to, str(helpTranslate))
 #==============================================================================#
-                elif text.lower() == 'Sp':
+                elif text.lower() == 'สปีด':
                     start = time.time()
                     line.sendMessage(to, "☞ ŦΣÄM ⚡ъਙЊъনਹਙ์⚡ BOT ☜")
                     elapsed_time = time.time() - start
@@ -1223,132 +1223,7 @@ def lineBot(op):
                     else:
                         line.sendMessage(msg.to,"ปิด อ่านคนแอบ แล้ว จ้า")
 
-#======================================ระ บ บ คิ ก เ ก อ ร์========================================#                         
-   #-------------------------------------------------------------------------------
-                elif text.lower() == 'protect on':
-                        if settings["protect"] == True:
-                            if settings["lang"] == "JP":
-                                line.sendMessage(msg.to,"➲ Protection Already On")
-                        else:
-                            settings["protect"] = True
-                            if settings["lang"] == "JP":
-                                line.sendMessage(msg.to,"➲ Protection Set To On")
-                                
-                elif text.lower() == 'protect off':
-                        if settings["protect"] == False:
-                            if settings["lang"] == "JP":
-                                line.sendMessage(msg.to,"➲ Protection Already Off")
-                        else:
-                            settings["protect"] = False
-                            if settings["lang"] == "JP":
-                                line.sendMessage(msg.to,"➲ Protection Set To Off")
-#----------------------------------------------------------------------------------------                        
-                elif text.lower() == 'qrprotect on':
-                        if settings["qrprotect"] == True:
-                            if settings["lang"] == "JP":
-                                line.sendMessage(msg.to,"➲ Protection Qr Already On")
-                            else:
-                                line.sendMessage(msg.to,"➲ Protection Qr Set To On")
-                        else:
-                            settings["qrprotect"] = True
-                            if settings["lang"] == "JP":
-                                line.sendMessage(msg.to,"➲ Protection Qr Set To On")
-                            else:
-                                line.sendMessage(msg.to,"➲ Protection Qr Already On")
-                                
-                elif text.lower() == 'qrprotect off':
-                        if settings["qrprotect"] == False:
-                            if settings["lang"] == "JP":
-                                line.sendMessage(msg.to,"➲ Protection Qr Already Off")
-                            else:
-                                line.sendMessage(msg.to,"➲ Protection Qr Set To Off")
-                        else:
-                            settings["qrprotect"] = False
-                            if settings["lang"] == "JP":
-                                line.sendMessage(msg.to,"➲ Protection Qr Set To Off")
-                            else:
-                                line.sendMessage(msg.to,"➲ Protection Qr Already Off")
-#-------------------------------------------------------------------------------
-                elif text.lower() == 'inviteprotect on':
-                        if settings["inviteprotect"] == True:
-                            if settings["lang"] == "JP":
-                                line.sendMessage(msg.to,"➲ Protection Invite Already On")
-                            else:
-                                line.sendMessage(msg.to,"➲ Protection Invite Set To On")
-                        else:
-                            settings["inviteprotect"] = True
-                            if settings["lang"] == "JP":
-                                line.sendMessage(msg.to,"➲ Protection Invite Set To On")
-                            else:
-                                line.sendMessage(msg.to,"➲ Protection Invite Already On")
-                                
-                elif text.lower() == 'inviteprotect off':
-                        if settings["inviteprotect"] == False:
-                            if settings["lang"] == "JP":
-                                line.sendMessage(msg.to,"➲ Protection Invite Already Off")
-                            else:
-                                line.sendMessage(msg.to,"➲ Protection Invite Set To Off")
-                        else:
-                            settings["inviteprotect"] = False
-                            if settings["lang"] == "JP":
-                                line.sendMessage(msg.to,"➲ Protection Invite Set To Off")
-                            else:
-                                line.sendMessage(msg.to,"➲ Protection Invite Already Off")
-#-------------------------------------------------------------------------------
-                elif text.lower() == 'cancelprotect on':
-                        if settings["cancelprotect"] == True:
-                            if settings["lang"] == "JP":
-                                line.sendMessage(msg.to,"➲ Protection Cancel Invite Already On")
-                            else:
-                                line.sendMessage(msg.to,"➲ Protection Cancel Invite Set To On")
-                        else:
-                            settings["cancelprotect"] = True
-                            if settings["lang"] == "JP":
-                                line.sendMessage(msg.to,"➲ Protection Cancel Invite Set To On")
-                            else:
-                                line.sendMessage(msg.to,"➲ Protection Cancel Invite Already On")
-                                
-                elif text.lower() == 'cancelprotect off':
-                        if settings["cancelprotect"] == False:
-                            if settings["lang"] == "JP":
-                                line.sendMessage(msg.to,"➲ Protection Cancel Invite Already Off")
-                            else:
-                                line.sendMessage(msg.to,"➲ Protection Cancel Invite Set To Off")
-                        else:
-                            settings["cancelprotect"] = False
-                            if settings["lang"] == "JP":
-                                line.sendMessage(msg.to,"➲ Protection Cancel Invite Set To Off")
-                            else:
-                                line.sendMessage(msg.to,"➲ Protection Cancel Invite Already Off")
-#-------------------------------------------------------------------------------
-#-----------------------------------------------------------
-                elif text.lower() == 'เปิดป้องกัน':
-                        settings["protect"] = True
-                        settings["qrprotect"] = True
-                        settings["inviteprotect"] = True
-                        settings["cancelprotect"] = True
-                        settings["join link"] = True
-                        line.sendMessage(msg.to,"Join link on")
-                        line.sendMessage(msg.to,"Qrprotect on")
-                        line.sendMessage(msg.to,"Protect on")
-                        line.sendMessage(msg.to,"Inviteprotect on")
-                        line.sendMessage(msg.to,"Cancelprotect on")
-                        line.sendMessage(msg.to,"➲ All Protect Set To On")
-                        		            
-                elif text.lower() == 'ปิดป้องกัน':
-             #       if msg._from in Owner:
-                        settings["protect"] = False
-                        settings["qrprotect"] = False
-                        settings["inviteprotect"] = False
-                        settings["cancelprotect"] = False
-                        line.sendMessage(msg.to,"Qrprotect Off")
-                        line.sendMessage(msg.to,"Protect Off")
-                        line.sendMessage(msg.to,"Inviteprotect Off")
-                        line.sendMessage(msg.to,"Cancelprotect Off")
-                        line.sendMessage(msg.to,"➲ All Protect Set To Modar")
-            #        else:
-             #           gye.sendMessage(msg.to,"Just for Owner")
-#==============================================================================#                
+#======================================ระ บ บ คิ ก เ ก อ ร์========================================#                                  
                 elif msg.text.lower() == 'รายงานตัว':
                         line.sendContact(to, lineMID)
                         ki1.sendContact(to, ki1MID)
@@ -1409,44 +1284,6 @@ def lineBot(op):
                     line.updateGroup(G)
                        
 #-------------------------------------------------------------------------------
-                elif text.lower() == 'ciak all member':
-                 #   if msg._from in Owner:
-                        if msg.toType == 2:
-                            print ("[ 19 ] KICK ALL MEMBER")
-                            _name = msg.text.replace("kickallmember","")
-                            #gs = gye.getGroup(msg.to)
-                            gs = ki1.getGroup(msg.to)
-                            gs = ki2.getGroup(msg.to)
-                            gs = ki3.getGroup(msg.to)
-                            gs = ki4.getGroup(msg.to)		
-                            gs = ki5.getGroup(msg.to)	
-                            gs = ki6.getGroup(msg.to)	
-                            gs = ki7.getGroup(msg.to)	
-                            gs = ki8.getGroup(msg.to)	
-                            gs = ki9.getGroup(msg.to)	
-                            gs = ki10.getGroup(msg.to)	
-                           #gye.sendMessage(msg.to,"「 Bye All 」")
-                           #gye.sendMessage(msg.to,"「 Sory guys 」")
-                            targets = []
-                            for g in gs.members:
-                                if _name in g.displayName:
-                                    targets.append(g.mid)
-                            if targets == []:
-                                line.sendMessage(msg.to,"Not Found")
-                            else:
-                                for target in targets:
-                                    if not target in Bots:
-                                        if not target in Owner:
-                                            if not target in admin:
-                                                try:
-                                                    klist=[line,ais,ki2,ki3,ki4]
-                                                    kicker=random.choice(klist)
-                                                    kicker.kickoutFromGroup(msg.to,[target])
-                                                    print (msg.to,[g.mid])
-                                                except:
-                                                    line.sendMessage(msg.to,"") 
-#==============================================================================#     
-
 #~~~~~~~~~~~~~~~~~~~~ บ อ ท ท ด ล อ ง น้ อ ง สุ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
                 elif "spamtag @" in msg.text.lower():
                    _name = msg.text.replace("spamtag @","")
@@ -1726,80 +1563,9 @@ def lineBot(op):
                             line.updateGroupPicture(to, path)
                             line.sendMessage(to, "Berhasil mengubah foto group")
 #=========================================ระ บบ 1======================================[gyeMID - kiMID]
-                
+             
                         
-                        ki9.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki10.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        G = ki8.getGroup(op.param1)
-                        G.preventedJoinByTicket = True
-                        ki8.updateGroup(G)
-                        G.preventedJoinByTicket(G)
-                        ki8.updateGroup(G)
-                        settings["blacklist"][op.param2] = True
-#-------------------------------------------------------------------------------[kiMID ki2MID]
-                elif op.param3 in ki10MID:
-                    if op.param2 in ki9MID:
-                        G = ki9.getGroup(op.param1)
-                        G.preventedJoinByTicket = False
-                        ki9.updateGroup(G)
-                        invsend = 0
-                        Ticket = ki9.reissueGroupTicket(op.param1)
-                        line.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki6.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki7.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki8.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki9.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki10.acceptGroupInvitationByTicket(op.param1,Ticket)   
-                        G = ki9.getGroup(op.param1)
-                        G.preventedJoinByTicket = True
-                        ki9.updateGroup(G)
-                        G.preventedJoinByTicket(G)
-                        ki9.updateGroup(G)
-                    else:
-                        G = ki9.getGroup(op.param1)
-#                        ginfo = ki2.getGroup(op.param1)
-                        ki9.kickoutFromGroup(op.param1,[op.param2])
-                        G.preventedJoinByTicket = False
-                        ki9.updateGroup(G)
-                        invsend = 0
-                        Ticket = ki9.reissueGroupTicket(op.param1)
-                        line.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki1.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki5.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki6.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki7.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki8.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki9.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        ki10.acceptGroupInvitationByTicket(op.param1,Ticket)
-                        G = ki9.getGroup(op.param1)
-                        G.preventedJoinByTicket = True
-                        ki9.updateGroup(G)
-                        G.preventedJoinByTicket(G)
-                        ki9.updateGroup(G)
-                        settings["blacklist"][op.param2] = True
-		
-                elif op.param2 not in Bots:
-                    if op.param2 in admin:
-                        pass
-                    elif settings["protect"] == True:
-                        settings["blacklist"][op.param2] = True
-                        random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
-                        random.choice(KAC).inviteIntoGroup(op.param1,[op.param3])
-                        random.choice(KAC).sendText(op.param1,"Don't Play bro...!")
                         
-                else:
-                    pass
-            except:
-                pass
-#==============================================================================#
 #==============================================================================#
         if op.type == 26:
             print ("[ 26 ] RECEIVE MESSAGE")
