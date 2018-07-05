@@ -19,11 +19,6 @@ botStart = time.time()
 #==============================================================================#
 
 
-# ke = LINE()
-# ke.log("Auth Token : " + str(ke.authToken))
-# ke.log("Timeline Token : " + str(ke.tl.channelAccessToken))
-
-
 print ("Login Succes")
 
 lineMID = line.profile.mid
