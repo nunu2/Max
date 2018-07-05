@@ -18,6 +18,26 @@ from googletrans import Translator
 botStart = time.time()
 #==============================================================================#
 
+line = LINE()
+line.log("Auth Token : " + str(line.authToken))
+line.log("Timeline Token : " + str(line.tl.channelAccessToken))
+
+ki = LINE("EuMyJewGfP7IQml9de25.4ncHhhZkEbPPMUBZseq2jq.Gt6JJWu4eicDTlVQ64qSkBa3pPiNYwYZRFuRf1DP+Og=")
+ki.log("Auth Token : " + str(ki.authToken))
+ki.log("Timeline Token : " + str(ki.tl.channelAccessToken))
+
+kk = LINE("EuQ9236018FhwIU27NE3.z+0IpsHolIaEJN/TJzKjSW.NFx1S7q7NbDk/Pq+ra1fh4HhrX3XVdrGHHEPcYH7QEU=")
+kk.log("Auth Token : " + str(kk.authToken))
+kk.log("Timeline Token : " + str(kk.tl.channelAccessToken))
+
+kc = LINE()
+kc.log("Auth Token : " + str(kc.authToken))
+kc.log("Timeline Token : " + str(kc.tl.channelAccessToken))
+
+ke = LINE()
+ke.log("Auth Token : " + str(ke.authToken))
+ke.log("Timeline Token : " + str(ke.tl.channelAccessToken))
+
 
 print ("Login Succes")
 
@@ -25,27 +45,27 @@ lineMID = line.profile.mid
 lineProfile = line.getProfile()
 lineSettings = line.getSettings()
 
-# kiMID = ki.profile.mid
-# kiProfile = ki.getProfile()
-# kiSettings = ki.getSettings()
+kiMID = ki.profile.mid
+kiProfile = ki.getProfile()
+kiSettings = ki.getSettings()
 
-# kkMID = kk.profile.mid
-# kkProfile = kk.getProfile()
-# kkSettings = kk.getSettings()
+kkMID = kk.profile.mid
+kkProfile = kk.getProfile()
+kkSettings = kk.getSettings()
 
-# kcMID = kc.profile.mid
-# kcProfile = kc.getProfile()
-# kcSettings = kc.getSettings()
+kcMID = kc.profile.mid
+kcProfile = kc.getProfile()
+kcSettings = kc.getSettings()
 
-# keMID = kc.profile.mid
-# keProfile = kc.getProfile()
-# keSettings = kc.getSettings()
+keMID = kc.profile.mid
+keProfile = kc.getProfile()
+keSettings = kc.getSettings()
 
 
-# oepoll = OEPoll(ke)
-# oepoll = OEPoll(kc)
-# oepoll = OEPoll(kk)
-# oepoll = OEPoll(ki)
+oepoll = OEPoll(ke)
+oepoll = OEPoll(kc)
+oepoll = OEPoll(kk)
+oepoll = OEPoll(ki)
 oepoll = OEPoll(line)
 readOpen = codecs.open("read.json","r","utf-8")
 settingsOpen = codecs.open("temp.json","r","utf-8")
@@ -53,11 +73,11 @@ read = json.load(readOpen)
 settings = json.load(settingsOpen)
 Rfu = [line]
 lineMID = line.getProfile().mid
-# kiMID = ki.getProfile().mid
-# kkMID = kk.getProfile().mid
-# kcMID = kc.getProfile().mid
-# kcMID = ke.getProfile().mid
-# bot1 = line.getProfile().mid
+kiMID = ki.getProfile().mid
+kkMID = kk.getProfile().mid
+kcMID = kc.getProfile().mid
+kcMID = ke.getProfile().mid
+bot1 = line.getProfile().mid
 RfuBot=[lineMID]
 Family=["u8868612505a8f0a0a702291b756a45f3",lineMID]
 admin=['u8868612505a8f0a0a702291b756a45f3',lineMID]
